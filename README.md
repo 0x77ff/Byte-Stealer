@@ -3,7 +3,7 @@ An empty repo for a project im currently making
 May only work for windows machines.
 
 To-Do:
-• Wifi-pass taker
+• Wifi-pass taker \n
 • Chrome saved cookies/Password/History
 • Auto IP geolocator
 • Add gmail functionality
