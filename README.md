@@ -15,4 +15,4 @@ To-Do:\
 \
 Done:\
 • Discord webhook implementation (1 bot)\
-• IP logger\
+• IP logger
