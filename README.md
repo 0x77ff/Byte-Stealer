@@ -3,7 +3,6 @@ An empty repo for a project im currently making\
 May only work for windows machines.\
 
 To-Do:\
-• Wifi-pass taker \
 • Chrome saved cookies/Password/History\
 • Auto IP geolocator\
 • Add gmail functionality\
@@ -15,4 +14,5 @@ To-Do:\
 \
 Done:\
 • Discord webhook implementation (1 bot)\
+• Wifi-pass taker \
 • IP logger
