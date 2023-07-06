@@ -4,7 +4,6 @@ May only work for windows machines.\
 
 To-Do:\
 • Chrome saved cookies/Password/History\
-• Auto IP geolocator\
 • Add gmail functionality\
 • Keystoke logger\
 • Multiple Webhooks for different data types\
@@ -15,4 +14,5 @@ To-Do:\
 Done:\
 • Discord webhook implementation (1 bot)\
 • Wifi-pass taker \
+• Auto IP geolocator(city,country,postal,lat&long)\
 • IP logger
