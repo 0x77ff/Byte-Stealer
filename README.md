@@ -1,19 +1,11 @@
 # Byte-Logger
-An empty repo for a project im currently making\
-May only work for windows machines.\
-
-To-Do:\
-• Chrome saved cookies/Password/History\
-• Add gmail functionality\
-• Keystoke logger\
-• Multiple Webhooks for different data types\
-• Screen recording\
-• Audio recording(mic)\
-• Troll scripts (PC shutdown, etc)\
+A logger/spyware written in python 3\
+Written in windows so odnt expect it to work on other Operating Systems\
 \
-Done:\
+# This logger can has:\
 • Discord webhook implementation (1 bot)\
-• Wifi-pass taker \
+• Wifi-pass taker\
 • Auto IP geolocator(city,country,postal,lat&long)\
 • Roblox Cookie Stealer from many browsers\
-• IP logger
+• IP logger\
+• System info\
