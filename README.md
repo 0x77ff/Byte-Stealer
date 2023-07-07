@@ -2,7 +2,7 @@
 A logger/spyware written in python 3\
 Written in windows so odnt expect it to work on other Operating Systems\
 \
-This logger can has:\
+This logger can has:
 ```
 • Discord webhook implementation (1 bot)\
 • Wifi-pass taker\
