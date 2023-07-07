@@ -15,4 +15,5 @@ Done:\
 • Discord webhook implementation (1 bot)\
 • Wifi-pass taker \
 • Auto IP geolocator(city,country,postal,lat&long)\
+• Roblox Cookie Stealer from many browsers\
 • IP logger
