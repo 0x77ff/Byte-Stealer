@@ -14,7 +14,7 @@ This logger can has:
 # Discord Screenshots:
 
 
-# How to run:\
+# How to run:
 Get python(I used 3.9.12)/
 Install Byte-Logger.py onto your system/
 Make a Discord server and add a webhook\
