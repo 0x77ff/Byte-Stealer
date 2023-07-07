@@ -11,7 +11,10 @@ This logger can has:
 • IP logger
 • System info
 ```
-How to run:\
+Discord Screenshots:
+
+
+#How to run:\
 Get python(I used 3.9.12)/
 Install Byte-Logger.py onto your system/
 Make a Discord server and add a webhook\
