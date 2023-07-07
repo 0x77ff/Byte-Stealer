@@ -17,7 +17,7 @@ This logger can has:
 # How to run:
 Get python(I used 3.9.12)/
 Install Byte-Logger.py onto your system/
-Make a Discord server and add a webhook\
+Make a Discord server and add a webhook/
 Copy the Webhook URL and replace YourWebhookURL with the URl(line 14 of the code)\
 make a text file called requirements.txt and replace the contents with the requirements.txt inside of the repository/
 
