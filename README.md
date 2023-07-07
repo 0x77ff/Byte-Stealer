@@ -21,7 +21,7 @@ Make a Discord server and add a webhook\
 Copy the Webhook URL and replace YourWebhookURL with the URl(line 14 of the code)\
 make a text file called requirements.txt and replace the contents with the requirements.txt inside of the repository/
 
-Run this:
+Run this in cmd:
 ```
 pip install -r Path-To-requirements.txt
 ```
