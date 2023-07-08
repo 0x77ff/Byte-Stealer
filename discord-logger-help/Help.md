@@ -7,7 +7,7 @@ VScode(optional but highly useful)
 
 # Steps:
 \
-Make a new .py file and replace its contents with https://github.com/TurtlesXD/Discord-Logger/blob/main/Logger.py\
+Make a new .py file and replace its contents with https://github.com/TurtlesXD/Discord-Logger/blob/main/Logger.py \
 Make a Discord wehbook in yout server and copy its URl \
 Replace YourWebhookURL with your url in line 14 of the code\
 \ 
