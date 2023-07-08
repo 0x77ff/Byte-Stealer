@@ -34,7 +34,7 @@ Now, run this command(remember to make sure all files are saved before running t
 pyinstaller --noconfirm --onefile --windowed --icon "Path-To-Your-.ico-file" --ascii --clean "path-to-Logger.py"
 ```
 Once Pyinstaller is finished converting your file, Open the newly created 'build' folder inside of your working directory\
-And, boom! You now have an .exe file ready to be used.\
+And, boom! You now have an .exe file ready to be used.
 
 ```
 Note: This is for educational purposes, i do not condone the use of this script on people without their consent!
