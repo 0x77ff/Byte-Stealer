@@ -35,7 +35,7 @@ pyinstaller --noconfirm --onefile --windowed --icon "Path-To-Your-.ico-file" --a
 ```
 Once Pyinstaller is finished converting your file, Open the newly created 'build' folder inside of your working directory\
 And, boom! You now have an .exe file ready to be used.\
-\
+
 ```
 Note: This is for educational purposes, i do not condone the use of this script on people without their consent!
 ```
