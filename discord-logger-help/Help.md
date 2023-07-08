@@ -1,9 +1,9 @@
 # How to use:
 \
 Requirements:\
-Python 3.9 or higher(I used 3.9.12)\
-A windows machine\
-VScode(optional but highly useful)
+• Python 3.9 or higher(I used 3.9.12)\
+• A windows machine\
+• VScode(optional but highly useful)
 
 # Steps:
 \
