@@ -1,6 +1,6 @@
 # Discord-Logger
 A logger/spyware written in python 3\
-Written in windows so odnt expect it to work on other Operating Systems\
+Only works in windows, dont expect to work for other OS\
 \
 This logger can has:
 ```
