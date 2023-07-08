@@ -12,7 +12,10 @@ This logger can has:
 • System info
 ```
 # Discord Screenshots:
-
+IP,Location,Wifi:
 ![Alt text](discord-logger-images/GITHUB1.png?raw=true)
-
+Roblox cookies:
+![Alt text](discord-logger-images/Discord2.png?raw=true)
+System info:
+![Alt text](discord-logger-images/discord3.png?raw=true)
 
