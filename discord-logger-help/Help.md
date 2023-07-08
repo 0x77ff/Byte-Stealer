@@ -4,6 +4,7 @@ Requirements:\
 • Python 3.9 or higher(I used 3.9.12)\
 • A windows machine\
 • VScode(optional but highly useful)
+• An .ico file (Icon)
 
 # Steps:
 \
@@ -29,6 +30,9 @@ If you dont already have Pyinstaller, run this command:
 ```
 pip install pyinstaller
 ```
+If you dont have one already, download or convert and image into an .ico file\
+For the exe icon. I recommend using https://redketchup.io/icon-converter Or convertio.com\
+
 Now, run this command(remember to make sure all files are saved before running this):
 ```
 pyinstaller --noconfirm --onefile --windowed --icon "Path-To-Your-.ico-file" --ascii --clean "path-to-Logger.py"
