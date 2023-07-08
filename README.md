@@ -13,5 +13,6 @@ This logger can has:
 ```
 # Discord Screenshots:
 
+![Alt text](Discord-Logger/discord-logger images/GITHUB1 (1).png?raw=true)
 
 
