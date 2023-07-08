@@ -21,5 +21,5 @@ Roblox cookies:\
 \
 System info:\
 ![Alt text](discord-logger-images/discord3.png?raw=true)\
-\
+
 
