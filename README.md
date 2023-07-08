@@ -12,6 +12,7 @@ This logger can has:
 • System info
 ```
 # Discord Screenshots:
+\
 IP,Location,Wifi:\
 ![Alt text](discord-logger-images/GITHUB1.png?raw=true)\
 \
