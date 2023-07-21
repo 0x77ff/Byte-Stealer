@@ -8,8 +8,8 @@ This logger can has:
 • Wifi-password taker
 • Auto IP geolocator(city,country,postal,latitude&longitude)
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge
-• steamLoginSecure+sessionId Token taker(steam login cookie) from a browser(not a client)
-• Can take History-Bookmarks-Cookies from practically all browsers and sends them as a .zip
+• steamLoginSecure+sessionId Token taker(steam login cookie) from Chrome(not a client)
+• Can take History-Bookmarks-Cookies from practically all browsers and sends them as a .zip (only cookies from Chrome for now)
 • IP logger
 • System info
 ```
