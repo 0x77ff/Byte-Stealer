@@ -28,8 +28,9 @@ Features:
 \
 ![Alt text](img/SCREENIE5.png?raw=true)\
 \
+Exodus Appdata:
 ![Alt text](img/SCREENIE6.png?raw=true)\
-\
+
 # How to Run:
 Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
 
