@@ -10,8 +10,8 @@ Features:
 • Auto IP geolocator(city,country,postal,latitude&longitude) 🌎
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge 🍪
 • steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client) 🍘
-• Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill from practically all browsers and sends them as a .zip📁
-• Steal Discord token from all types of installation 🔘
+• Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill from practically all browsers and sends them as .zip 📁
+• Steal Discord token from all types of installation 🔘 
 • Auto Screenshot as .png 🖼️
 • Records 5s clip from webcam as .avi 🎥
 • Crypto Wallet Stealer: Exodus👾, More soon
