@@ -18,17 +18,22 @@ Features:
 ```
 # Discord Screenshots:
 \
+Screenshot and .zip files :\
 ![Alt text](img/SCREENIE1.png?raw=true)\
 \
+System Data and saved WiFi :\
 ![Alt text](img/SCREENIE2.png?raw=true)\
 \
+Geolocation Data and Roblox cookies :\
 ![Alt text](img/SCREENIE3.png?raw=true)\
 \
+Steam and discord cookies :\
 ![Alt text](img/SCREENIE4.png?raw=true)\
 \
+History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip :\
 ![Alt text](img/SCREENIE5.png?raw=true)\
 \
-Exodus Appdata:
+Exodus Appdata :\
 ![Alt text](img/SCREENIE6.png?raw=true)\
 
 # How to Run:
