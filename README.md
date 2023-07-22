@@ -19,13 +19,13 @@ Features:
 # Discord Screenshots:
 \
 IP,Location,Wifi:\
-![Alt text](discord-logger-images/GITHUB1.png?raw=true)\
+![Alt text](img/GITHUB1.png?raw=true)\
 \
 Roblox cookies:\
-![Alt text](discord-logger-images/Discord2.png?raw=true)\
+![Alt text](img/Discord2.png?raw=true)\
 \
 System info:\
-![Alt text](discord-logger-images/discord3.png?raw=true)\
+![Alt text](img/discord3.png?raw=true)\
 # How to Run:
 Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
 
