@@ -1,17 +1,20 @@
-# Byte-Stealer 1.1.0
+# Byte-Stealer 1.2.0
 A logger/spyware written in python 3\
 Only works in windows, dont expect to work for other OS\
 \
-This logger can has:
+Features:
 ```
-• Discord webhook implementation (1 bot)
+• IP logger
+• System info
 • Wifi-password taker
 • Auto IP geolocator(city,country,postal,latitude&longitude)
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge
-• steamLoginSecure+sessionId Token taker(steam login cookie) from Chrome(not a client)
-• Can take History-Bookmarks-Cookies from practically all browsers and sends them as a .zip (only cookies from Chrome for now)
-• IP logger
-• System info
+• steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client)
+• Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill from practically all browsers and sends them as a .zip
+• Steal Discord token from all types of installation
+• Auto Screenshot as .png
+• Records 5s clip from webcam as .avi
+• Crypto Wallet Stealer: Exodus👾, More soon
 ```
 # Discord Screenshots:
 \
