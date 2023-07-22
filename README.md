@@ -18,14 +18,18 @@ Features:
 ```
 # Discord Screenshots:
 \
-IP,Location,Wifi:\
-![Alt text](img/GITHUB1.png?raw=true)\
+![Alt text](img/SCREENIE1.png?raw=true)\
 \
-Roblox cookies:\
-![Alt text](img/Discord2.png?raw=true)\
+![Alt text](img/SCREENIE2.png?raw=true)\
 \
-System info:\
-![Alt text](img/discord3.png?raw=true)\
+![Alt text](img/SCREENIE3.png?raw=true)\
+\
+![Alt text](img/SCREENIE4.png?raw=true)\
+\
+![Alt text](img/SCREENIE5.png?raw=true)\
+\
+![Alt text](img/SCREENIE6.png?raw=true)\
+\
 # How to Run:
 Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
 
