@@ -38,7 +38,7 @@ Exodus Appdata :\
 ![Alt text](img/SCREENIE6.png?raw=true)
 
 ## How to Run:
-Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
+click [Here](https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md) for the guide
 
 ### Upcoming features:
 • damn idk\
