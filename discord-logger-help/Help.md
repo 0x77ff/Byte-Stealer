@@ -1,7 +1,7 @@
 # How to use:
-\
+
 Requirements:\
-• A windows machine\
+• A windows machine
 
 
 ## Steps:
