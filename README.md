@@ -15,7 +15,9 @@ Only works in windows, dont expect to work for other OS\
 • Auto Screenshot as .png 🖼️
 • Records 5s clip from webcam as .avi 🎥
 • Records 5s clip from mic as .wav 🎤
-• Crypto Wallet Stealer: Exodus👾, More soon
+• Crypto Wallet Stealer: Exodus👾
+• No local caching 💾
+• BTC wallet replacer WIP🔨
 ```
 ## Discord Screenshots:
 \
