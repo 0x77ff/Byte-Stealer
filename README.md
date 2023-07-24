@@ -2,8 +2,7 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
-[fork my repository](https://github.com/user/repository/fork)
-
+[![](https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png)](https://github.com/TurtelsXD/Byte-Stealer/subscription)
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
 Only works in windows, dont expect to work for other OS\
