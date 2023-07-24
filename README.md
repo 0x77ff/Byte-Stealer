@@ -3,7 +3,7 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
 
-Join the discord [Here](https://discord.gg/QjzgPDt6)
+[Join the discord ](https://discord.gg/QjzgPDt6)
 
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
