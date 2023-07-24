@@ -6,7 +6,7 @@
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
 Only works in windows, dont expect to work for other OS\
-\
+
 ### Features:
 ```
 • IP logger 🌐
