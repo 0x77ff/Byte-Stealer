@@ -1,5 +1,7 @@
-![alt text](https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png?raw=true)
 
+<p align="center">
+ <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
+</p>
 
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
