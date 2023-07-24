@@ -2,10 +2,10 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
-
+[Join the discord for updates and news!](https://discord.gg/QjzgPDt6)
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
-Only works in windows, dont expect to work for other OS\
+Only works in windows 10/11\
 
 ### Features:
 ```
