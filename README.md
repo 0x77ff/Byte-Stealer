@@ -7,7 +7,7 @@
 
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
-Only works in windows 10/11\
+Only works in windows 10/11
 
 ### Features:
 ```
