@@ -3,7 +3,9 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
 
-[Join the discord ](https://discord.gg/QjzgPDt6)
+**Repository will not be updated until September 15. This version doesnt work, use an earlier commit!**
+
+
 
 # Byte-Stealer 1.2.5
 A logger/spyware written in python 3\
