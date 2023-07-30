@@ -19,8 +19,10 @@
 • Disable windows defender 
 • anything else (request in issues)
 ```
-My aim is to create a simple piece of malware with tons of functionality and features, click here to star this repo and here to watch this repo to support me and receive updates on Byte-Stealer!
+Click here to star this repo\ 
+Click here to watch this repo\ 
 
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
 
 
