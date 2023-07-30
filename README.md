@@ -18,6 +18,8 @@
 • Anti-Virtual Machine
 • Obfuscation
 • Disable windows defender 
+• Fake error popup
+• fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
 • anything else (request in issues)
 ```
 
