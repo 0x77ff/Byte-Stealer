@@ -22,8 +22,8 @@
 Click here to star this repo\ 
 Click here to watch this repo\ 
 
-<iframe          src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub">
-</iframe>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/TurtlesXD/Byte-Stealer" data-icon="octicon-star" data-show-count="true" aria-label="Star TurtlesXD/Byte-Stealer on GitHub">Star</a>
 
 
 
