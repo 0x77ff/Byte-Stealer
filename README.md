@@ -19,7 +19,7 @@
 • Disable windows defender 
 • anything else (request in issues)
 ```
-
+My aim is to create a simple piece of malware with tons of functionality and features, click here to star this repo and here to watch this repo to support me and receive updates on Byte-Stealer!
 
 
 
