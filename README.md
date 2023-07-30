@@ -20,7 +20,7 @@
 • anything else (request in issues)
 ```
 
-[![Star on GitHub](https://img.shields.io/github/stars/your-username/your-repository.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
+[![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
 
 
 # Byte-Stealer 1.2.5
