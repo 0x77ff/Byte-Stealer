@@ -19,13 +19,8 @@
 • Disable windows defender 
 • anything else (request in issues)
 ```
-Click here to star this repo\ 
-Click here to watch this repo\ 
 
-
-<a class="github-button" href="https://github.com/TurtlesXD/Byte-Stealer" data-icon="octicon-star" data-show-count="true" aria-label="Star TurtlesXD/Byte-Stealer on GitHub">Star</a>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+[![Star on GitHub](https://img.shields.io/github/stars/your-username/your-repository.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
 
 
 # Byte-Stealer 1.2.5
