@@ -9,7 +9,7 @@
 ```
 • Discord cookie info (email, billing, etc)
 • Startup Functionality(injector, other malware capabilities)
-• Cryptojacking(Btc address swapper, downloading lolminer on victims computer)
+• Cryptojacking(Btc address swapper, downloading crypto miner on victims computer)
 • better configuration (bat files)
 • Worm Functionality?
 • Ransomware feature?
