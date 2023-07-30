@@ -15,6 +15,9 @@
 • Ransomware feature?
 • Reverse shell backdoor?(Not likely due to ip tracing)
 • Anti-Virtual Machine
+• Obfuscation
+• Disable windows defender 
+• anything else (request in issues)
 ```
 
 
