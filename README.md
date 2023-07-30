@@ -16,7 +16,7 @@
 • Ransomware feature?
 • Reverse shell backdoor?
 • Anti-Virtual Machine
-• Obfuscation (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets)
+• Obfuscation (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets from the exe)
 • Disable windows defender 
 • Fake error popup
 • fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
