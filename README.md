@@ -25,7 +25,8 @@ Click here to watch this repo\
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/TurtlesXD/Byte-Stealer" data-icon="octicon-star" data-show-count="true" aria-label="Star TurtlesXD/Byte-Stealer on GitHub">Star</a>
 
-
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
 # Byte-Stealer 1.2.5
