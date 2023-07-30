@@ -7,8 +7,14 @@
 
 #### Upcoming features
 • Discord cookie info (email, billing, etc)\
-• Startup Functionality(steal login details such as discord password when entered on victims computer)\
+• Startup Functionality(injector, other malware capabilities)\
 • Cryptojacking(Btc address swapper, downloading lolminer on victims computer)
+• better configuration (bat files)
+• Worm Functionality?
+• Ransomware feature?
+• Reverse shell backdoor?(Not likely)
+
+
 
 
 
