@@ -6,7 +6,7 @@
 **Repository will not be updated until September 15. This version doesnt work, use an earlier commit!**
 
 #### Upcoming features
-• Startup Functionality(steal login details such as discord)/
+• Startup Functionality(steal login details such as discord)\
 • Cryptojacking(Btc address swapper, eth miner to your wallet)
 
 
