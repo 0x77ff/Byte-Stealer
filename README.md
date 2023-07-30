@@ -13,7 +13,7 @@
 • better configuration (bat files)
 • Worm Functionality?
 • Ransomware feature?
-• Reverse shell backdoor?(Not likely)
+• Reverse shell backdoor?(Not likely due to ip tracing)
 ```
 
 
