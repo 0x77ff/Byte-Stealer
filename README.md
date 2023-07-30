@@ -14,9 +14,9 @@
 • Keylogger
 • Worm Functionality?
 • Ransomware feature?
-• Reverse shell backdoor?(Not likely due to ip tracing)
+• Reverse shell backdoor?
 • Anti-Virtual Machine
-• Obfuscation
+• Obfuscation (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets)
 • Disable windows defender 
 • Fake error popup
 • fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
