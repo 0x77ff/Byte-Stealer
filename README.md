@@ -21,6 +21,7 @@
 ```
 
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
+[![Watch on GitHub](https://img.shields.io/github/watchers/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/watchers)
 
 
 # Byte-Stealer 1.2.5
