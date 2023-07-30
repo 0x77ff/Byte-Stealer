@@ -14,6 +14,7 @@
 • Worm Functionality?
 • Ransomware feature?
 • Reverse shell backdoor?(Not likely due to ip tracing)
+• Anti-Virtual Machine
 ```
 
 
