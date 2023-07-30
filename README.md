@@ -11,6 +11,7 @@
 • Startup Functionality(injector, other malware capabilities)
 • Cryptojacking(Btc address swapper, downloading crypto miner on victims computer)
 • better configuration (bat files)
+• Keylogger
 • Worm Functionality?
 • Ransomware feature?
 • Reverse shell backdoor?(Not likely due to ip tracing)
