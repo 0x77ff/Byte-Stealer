@@ -14,7 +14,7 @@
 
 
 # Byte-Stealer 1.2.5
-A logger/spyware written in python 3\
+A piece of malware written in python 3\
 Only works in windows 10/11
 
 ### Features:
@@ -25,14 +25,13 @@ Only works in windows 10/11
 • Auto IP geolocator(city,country,postal,latitude&longitude) 🌎
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge 🍪
 • steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client) 🍘
-• Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill-CreditCards from practically all browsers and sends them as .zip 📁
+• Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill-CreditCards from basically all chromium browsers and sends them as .zip 📁
 • Steal Discord token from all types of installation 🔘 
 • Auto Screenshot as .png 🖼️
 • Records 5s clip from webcam as .avi 🎥
 • Records 5s clip from mic as .wav 🎤
 • Crypto Wallet Stealer: Exodus👾
 • No local caching 💾
-• BTC wallet replacer WIP🔨
 ```
 ## Discord Screenshots:
 \
