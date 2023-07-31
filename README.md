@@ -3,7 +3,7 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
 
-**Repository will not be updated until September 15. This version doesnt work, use an earlier commit!**
+**i will not work on this repository until early september, as i am away from home. I honestly dont remember which was my last working commit, but i do believe my last release is working, so use that! If it doenst work, your probably gonna have to wait, srry.**
 
 #### Upcoming features
 ```
