@@ -12,6 +12,9 @@
 • Cryptojacking(Btc address swapper, downloading crypto miner on victims computer)
 • better configuration (bat files)
 • Keylogger
+• Minecraft session if cookie
+• %APPDATA% cloner?
+• File Stealer with certain keywords, ie. My passwords.txt
 • Worm Functionality?
 • Ransomware feature?
 • Reverse shell backdoor?
