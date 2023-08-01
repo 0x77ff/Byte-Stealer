@@ -12,14 +12,14 @@
 • Cryptojacking(Btc address swapper, downloading crypto miner on victims computer)
 • better configuration (bat files)
 • Keylogger
-• Minecraft session if cookie
+• Minecraft session id cookie
 • %APPDATA% cloner?
 • File Stealer with certain keywords, ie. My passwords.txt
 • Worm Functionality?
 • Ransomware feature?
 • Reverse shell backdoor?
 • Anti-Virtual Machine
-• Obfuscation (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets from the exe)
+• Obfuscation/F.U.D (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets from the exe)
 • Disable windows defender 
 • Fake error popup
 • fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
