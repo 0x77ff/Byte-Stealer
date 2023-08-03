@@ -3,6 +3,8 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 </p>
 
+**Going offline for the next week and a bit, I mean like no WiFi and 0 bars of cell. If you have an issue I'll try and get back to you as soon as I can**
+
 **i will not work on this repository until early september, as i am away from home. I honestly dont remember which was my last working commit, but i do believe my last release is working, so use that! If it doenst work, your probably gonna have to wait, srry.**
 
 #### Upcoming features
