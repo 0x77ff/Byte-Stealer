@@ -11,7 +11,7 @@
 ```
 • Discord cookie info (email, billing, etc)
 • Startup Functionality(injector, other malware capabilities)
-• Cryptojacking(Btc address swapper, downloading crypto miner on victims computer)
+• Cryptojacking(Btc address swapper, downloading crypto miner,probably xmrig, on victims computer)
 • better configuration (bat files)
 • Keylogger
 • Minecraft session id cookie
