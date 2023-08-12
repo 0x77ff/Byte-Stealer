@@ -8,22 +8,25 @@
 #### Upcoming features
 ```
 • Discord cookie info (email, billing, etc)
-• Startup Functionality(injector, other malware capabilities)
+• Startup Functionality(injector,Disabling certain apps like SystemSettings.exe by ending process, other malware capabilities)
 • Cryptojacking(Btc address swapper, downloading crypto miner,probably xmrig, on victims computer)
-• better configuration (bat files)
-• Keylogger
+• better configuration (Script editor that doesn't require manual editing)
+• Edit the local drive (C:/) and overwrite the MBR(This will wipe the users system, super illegal and dangerous if accidentally ran)
+• Rootkit Functionality(Using Ctypes and the Windows API, this means you can execute commands like changing the users windows password(basic), or renaming Crucial system files)
+• Keylogger?
 • Minecraft session id cookie
 • %APPDATA% cloner?
-• File Stealer with certain keywords, ie. My passwords.txt
+• File Stealer with certain keywords, ie. My passwords.txt?
 • Worm Functionality?
 • Ransomware feature?
 • Reverse shell backdoor?
 • Anti-Virtual Machine
-• Obfuscation/F.U.D (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets from the exe)
+• Obfuscation/F.U.D (This will jumble up the code, and make it unreadable, meaning its practically impossible for someone to get your webhook url and crypto wallets from the exe, if they even manage to decompile it.)
 • Disable windows defender 
 • Fake error popup
 • fake BSOD;) if u really want it(not recommended as victim will know something is wrong)
-• anything else (request in issues or msg me on discord)
+• anything else (msg me on discord at chickenpie8636)
+Question marks are a maybe btw, or not needed at the moment
 ```
 
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
