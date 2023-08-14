@@ -2,6 +2,7 @@
 
 Requirements:\
 • A windows machine
+• VScode(Not required now but is helpful)
 
 ## Steps:
 Current release isn't working btw!\
