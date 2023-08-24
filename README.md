@@ -61,6 +61,7 @@ Only works in windows 10/11
 • Records 5s clip from mic as .wav 🎤
 • Crypto Wallet Stealer: Exodus👾
 • No local caching 💾
+• Fully open source and easy to read/make changes or your own features
 ```
 ## Discord Screenshots:
 \
