@@ -122,7 +122,6 @@ postal=data['postal']
 latlong=str(loc).split(',')
 lat,long=latlong[0],latlong[1]
 timezone=data['timezone']
-hostname=data['hostname']
 
 
 def edge_logger():
