@@ -12,7 +12,7 @@ If you already have python (3.9 or above) or have finished running **Download-Py
 Run **Install-Packages.bat**. This will download all the 3rd party packages used as well as pyinstaller for exe creation.\
 Once you've finished running **Install-Packages.bat**,\
 Now right click on Logger.py and open it with Idle 3.9\
-Now go to line 58 and input your url into the webhook variable\
+Now go to line 34 and input your url into the webhook variable\
 Now save the file\
 Now you can run **buildExe.bat**, The file path should be ParentDirectory//Logger.py(Example: C:\Users\Admin\Logger.py)
 ```
