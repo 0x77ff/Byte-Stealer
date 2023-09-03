@@ -14,11 +14,12 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 Im back so expect updates
 
 # Byte-Stealer 1.3.0
-
+Current Update Log:
 ```
 Fixed Geolocation bug
 Fixed Buildexe.bat not working
 Added threading for mic and video recording
+Fixed support for 70 charater discord tokens
 ```
 
 
