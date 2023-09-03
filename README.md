@@ -62,7 +62,9 @@ History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip :\
 \
 Exodus Appdata :\
 ![Alt text](img/SCREENIE6.png?raw=true)
-
+\
+VirusTotal :\
+![Alt text](img/Virustotal.png?raw=true)
 ## How to Run:
 click [Here](https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md) for the guide
 
