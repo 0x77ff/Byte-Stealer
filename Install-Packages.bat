@@ -27,7 +27,7 @@ python -m pip install numpy
 python -m pip install wavio
 python -m pip install threading
 python -m pip install ctypes
-python -m pip install pyarmor==7.7.0
+python -m pip install pyarmor==7.7.4
 
 echo Libraries are finished installing!
 
