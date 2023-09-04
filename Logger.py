@@ -683,7 +683,7 @@ def discordinfo():
     'visa': '4',
     'mastercard': '5'
     }
-    token = 'NjY1NTkwODY2Njg5MzkyNjQx.G-VpqH.FV47orgvPkaIsS3Whg5TyGnZ9a6RsXjUbOux7A'
+    token = ''
 
     try:
             headers = {
