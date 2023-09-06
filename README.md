@@ -14,7 +14,7 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 # Byte-Stealer 1.3.0
 Current Update Log:
 ```
-Removed a couple unnecessary libraries
+Removed a couple unnecessary libraries and functions
 Added fake error message
 Added Pyarmor for obfuscation
 Fixed Geolocation bug
