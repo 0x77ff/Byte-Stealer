@@ -4,7 +4,6 @@ python -m pip install --upgrade pip
 python -m pip install pyinstaller
 python -m pip install discord-webhook
 python -m pip install browser-cookie3
-python -m pip install subprocess
 python -m pip install jsonlib
 python -m pip install socket
 python -m pip install platform
