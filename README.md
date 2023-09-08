@@ -3,8 +3,7 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
 
-
-DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://github.com/TurtlesXD/Byte-Stealer/archive/refs/heads/main.zip
+Check out the latest release:)
 \
 \
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
