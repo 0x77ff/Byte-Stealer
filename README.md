@@ -11,6 +11,7 @@ Check out the latest release:)
 [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
 
 # Byte-Stealer 1.3.0
+Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
 Current Update Log:
 ```
 Edit Buildexe.bat for pyarmor error
@@ -33,13 +34,13 @@ Only works in windows 10/11
 ```
 • IP logger 🌐
 • System info 🖥️
-• Wifi-password taker 📶
+• Wifi-password taker 📶 Thanks to 201580ag for Korean encoding support
 • Auto IP geolocator(city,country,postal,latitude&longitude) 🌎
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge 🍪
 • steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client) 🍘
 • Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill-CreditCards from basically all chromium browsers and sends them as .zip 📁
 • Steal Discord token from all types of installation(59chars and 70chars) 🔘 
-• Auto Screenshot as .png 🖼️
+• Auto Screenshot as .png 🖼️ Thanks to 201580ag for multiple monitor support
 • Records 5s clip from webcam as .avi 🎥
 • Records 5s clip from mic as .wav 🎤
 • Crypto Wallet Stealer: Exodus👾
