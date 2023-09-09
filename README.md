@@ -3,7 +3,7 @@
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
 <div align="center">
-  <h1>Made by me with help from https://github.com/201580ag and https://github.com/TheCuteOwl</h1>
+  <h4>Made by me with help from https://github.com/201580ag and https://github.com/TheCuteOwl</h4>
 </div>
 
 
