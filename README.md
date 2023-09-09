@@ -6,10 +6,10 @@
   <h4>Made by me with help from https://github.com/201580ag and https://github.com/TheCuteOwl</h4>
 </div>
 <p align="center">
-  [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
-  [![Watch on GitHub](https://img.shields.io/github/watchers/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/watchers)
-  [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
-</p>
+  < [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers) >
+[![Watch on GitHub](https://img.shields.io/github/watchers/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/watchers)
+[![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
+
 
 
 
