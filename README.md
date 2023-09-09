@@ -2,8 +2,10 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
- <p style="text-align: center;">
-  Made by me with help from https://github.com/201580ag and https://github.com/TheCuteOwl</p>
+<div align="center">
+  <h1>Made by me with help from https://github.com/201580ag and https://github.com/TheCuteOwl</h1>
+</div>
+
 
 Check out the latest release:)
 \
