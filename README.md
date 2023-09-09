@@ -2,6 +2,7 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
+ <p style="text-align: center;">Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)</p>
 
 Check out the latest release:)
 \
@@ -11,7 +12,7 @@ Check out the latest release:)
 [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
 
 # Byte-Stealer 1.3.0
-Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
+
 Current Update Log:
 ```
 Edit Buildexe.bat for pyarmor error
