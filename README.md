@@ -2,6 +2,9 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
+<div align="center">
+  <h1>Byte-Stealer 1.3.0</h1>
+</div>
 
 Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
 
@@ -9,7 +12,7 @@ Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOw
 
 
 
-Check out the latest release:)
+Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/releases/tag/v1.3.0)
 \
 \
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
