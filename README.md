@@ -2,11 +2,9 @@
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
-<div align="center">
-  Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
-</div>
 
 Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
+
 
 
 
