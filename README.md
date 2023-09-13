@@ -12,7 +12,7 @@ Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOw
 
 
 
-Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/releases/tag/v1.3.0)
+Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/releases/tag/v1.3.1)
 \
 \
 [![Star on GitHub](https://img.shields.io/github/stars/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/stargazers)
