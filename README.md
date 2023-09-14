@@ -22,7 +22,7 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 
 Current New Update(s) Log:
 ```
-Currently Adding system info processor and GPU
+Updates system info with more accurate info
 
 ```
 
