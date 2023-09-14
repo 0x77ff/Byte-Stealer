@@ -20,11 +20,10 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
 # 
 
-Current Update Log:
+Current New Update(s) Log:
 ```
-Added windwos product key
-fixed made return give centrallized output
-fake error
+Currently Adding system info processor and GPU
+
 ```
 
 
