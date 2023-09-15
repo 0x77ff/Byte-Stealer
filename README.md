@@ -27,6 +27,10 @@ redone wifi passwords emebd
 Commented out remove cache system because i will re do it
 
 ```
+Working on:
+```
+WiGLE api geolocation using saved ssids and ip gelocation data for accurate results
+```
 
 
 A piece of malware/spyware written in python 3 with a ton of features and functionality\
