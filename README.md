@@ -22,7 +22,8 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 
 Current New Update(s) Log:
 ```
-Updates system info with more accurate info
+Redone system info embed
+Commented out remove cache system because i will re do it
 
 ```
 
