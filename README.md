@@ -29,7 +29,7 @@ Commented out remove cache system because i will re do it
 ```
 Working on:
 ```
-WiGLE api geolocation using saved ssids and ip gelocation data for accurate results(but my api requests already being rate limited)
+experimenting with apis for more data
 ```
 
 
