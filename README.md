@@ -23,6 +23,7 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 Current New Update(s) Log:
 ```
 Redone system info embed
+redone wifi passwords emebd
 Commented out remove cache system because i will re do it
 
 ```
