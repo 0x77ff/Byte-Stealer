@@ -4,7 +4,6 @@ import browser_cookie3
 import subprocess
 import json
 import socket
-import platform
 import re
 import sys
 import os
