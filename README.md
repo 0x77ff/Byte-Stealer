@@ -25,12 +25,13 @@ Current New Update(s) Log:
 Redone system info embed
 redone wifi passwords emebd
 Commented out remove cache system because i will re do it
+Redid Caching system(save temp files to %temp% and then deletes them)
+Added steam ssfn and config stealer
 
 ```
 Working on:
 ```
 experimenting with apis for more data
-Steam SSFN and config files stealer!
 ```
 
 
