@@ -30,6 +30,7 @@ Commented out remove cache system because i will re do it
 Working on:
 ```
 experimenting with apis for more data
+Steam SSFN and config files stealer!
 ```
 
 
