@@ -31,7 +31,7 @@ Added steam ssfn and config stealer
 ```
 Working on:
 ```
-experimenting with apis for more data
+experimenting with apis for more data(WiGLE api to find data using saved ssids and geolocated lat&long
 ```
 
 
