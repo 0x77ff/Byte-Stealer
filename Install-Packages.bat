@@ -16,6 +16,7 @@ python -m pip install threading
 python -m pip install pycryptodome
 python -m pip install pyperclip
 pythom -m pip install pywifi
+python -m pip install comtypes
 python -m pip install pypiwin32
 python -m pip install pyarmor==7.7.4
 
