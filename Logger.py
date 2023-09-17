@@ -28,6 +28,7 @@ import wavio
 import threading
 import ctypes
 import winreg as wrg
+import pywifi
 
 
 
