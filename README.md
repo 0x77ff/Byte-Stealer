@@ -10,7 +10,7 @@ Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOw
 
 
 
-
+Please note that is is just a passion project as i continue on my journey of programming, so it wont be well supported, but i will try my best for bug fixes and features!
 
 Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/releases/tag/v1.3.1)
 \
