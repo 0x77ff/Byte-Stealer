@@ -33,6 +33,7 @@ Added ethernet and wifi interface info stealer + Nearest/Strongest SSID(can be u
 Working on:
 ```
 experimenting with apis for more data(WiGLE api to find data using saved ssids and geolocated lat&long
+exe bugfixes
 ```
 
 
