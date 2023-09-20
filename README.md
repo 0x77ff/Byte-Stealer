@@ -29,6 +29,7 @@ Redid Caching system(save temp files to %temp% and then deletes them)
 Added steam ssfn and config stealer
 Added ethernet and wifi interface info stealer + Nearest/Strongest SSID(can be used for WiGLE/online wifi map geolocation)
 added encoding customization
+added roblox cookie grabbing to operagx and chromium browsers
 
 ```
 Working on:
