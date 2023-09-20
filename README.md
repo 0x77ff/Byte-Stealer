@@ -59,25 +59,25 @@ Only works in windows 10/11
 • Fake error message to not arouse suspicion
 • Fully open source and easy to read/make changes or your own features
 ```
-## Discord Screenshots:
+## Discord Screenshots from 20/9/23:
 \
 Screenshot and .zip files :\
-![Alt text](img/SCREENIE1.png?raw=true)\
+![Alt text](img/screenshotandfiles.png?raw=true)\
 \
 System Data and saved WiFi :\
-![Alt text](img/SCREENIE2.png?raw=true)\
+![Alt text](img/SysInfoAndWifiPass.png?raw=true)\
 \
-Geolocation Data and Roblox cookies :\
-![Alt text](img/SCREENIE3.png?raw=true)\
+Geolocation Data and IP:\
+![Alt text](img/IPandGeoloc.png?raw=true)\
 \
-Steam and discord cookies :\
-![Alt text](img/SCREENIE4.png?raw=true)\
+Roblox cookies :\
+![Alt text](img/RobloxCookie.png?raw=true)\
 \
-History-Bookmarks-Cookies-Passwords-CreditCards-Autofill.zip :\
-![Alt text](img/SCREENIE5.png?raw=true)\
+Discord Cookies :\
+![Alt text](img/discordtoken.png?raw=true)\
 \
-Exodus Appdata :\
-![Alt text](img/SCREENIE6.png?raw=true)
+Wifi interfaces :\
+![Alt text](img/WifiInterFace.png?raw=true)
 \
 VirusTotal :\
 ![Alt text](img/VirusTotal.png?raw=true)
