@@ -77,7 +77,7 @@ Discord Cookies :\
 ![Alt text](img/discordtoken.png?raw=true)\
 \
 Wifi interfaces :\
-![Alt text](img/WifiInterFace.png?raw=true)
+![Alt text](img/WifiInterface.png?raw=true)
 \
 VirusTotal :\
 ![Alt text](img/VirusTotal.png?raw=true)
