@@ -47,7 +47,7 @@ Only works in windows 10/11
 • Wifi-password taker 📶 Thanks to 201580ag for Korean encoding support
 • Auto IP geolocator(city,country,postal,latitude&longitude) 🌎
 • Roblox Cookie Stealer from Chrome,Opera,Firefox and Edge 🍪
-• steamLoginSecure+sessionId Token Stealer (steam login cookie) from Chrome(not a client) 🍘
+• Steam config and SSFN files
 • Steal History-Bookmarks-Cookies-SavedLoginDetails-BrowserAutofill-CreditCards from basically all chromium browsers and sends them as .zip 📁
 • Steal Discord token from all types of installation(59chars and 70chars) 🔘 
 • Auto Screenshot as .png 🖼️ Thanks to 201580ag for multiple monitor support
