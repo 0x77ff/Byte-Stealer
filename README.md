@@ -30,11 +30,12 @@ Added steam ssfn and config stealer
 Added ethernet and wifi interface info stealer + Nearest/Strongest SSID(can be used for WiGLE/online wifi map geolocation)
 added encoding customization
 added roblox cookie grabbing to operagx and chromium browsers
+Wigle Geolocation using closest SSID and ip Latitude and longitude
 
 ```
 Working on:
 ```
-experimenting with apis for more data(WiGLE api to find data using saved ssids and geolocated lat&long
+update Config for wigle api encoded header (api key)
 exe bugfixes
 ```
 
