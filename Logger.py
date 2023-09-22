@@ -29,7 +29,6 @@ import threading
 import ctypes
 import winreg as wrg
 import pywifi
-import tkinter as tk
 import urllib
 
 webhookurl=""
