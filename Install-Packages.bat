@@ -19,6 +19,7 @@ pythom -m pip install pywifi
 python -m pip install comtypes
 python -m pip install pypiwin32
 python -m pip install pyarmor==7.7.4
+python -m pip install urllib3
 
 echo Libraries are finished installing!
 
