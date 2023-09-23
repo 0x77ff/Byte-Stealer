@@ -88,7 +88,7 @@ VirusTotal :\
 click [Here](https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md) for the guide
 
 Thanks for checking out my repository!\
-msg me at chickenpie8636
+msg me at 0x77ff on discord
 
 
 
