@@ -16,7 +16,7 @@ if len(lines) >= 36:
 
     # Modify line 36 with the encoding information
     lines[35] = f'wifiencoding="{encoding}"\n'  # line 36
-    if wigleapi is not '':
+    if wigleapi != '':
      lines[36]=f'api_key = "{wigleapi}"'
 
 
