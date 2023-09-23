@@ -6,7 +6,7 @@ Requirements:\
 
 ## Steps:
 Current release isn't working btw!\
-Download the .zip file from [main.zip](https://github.com/TurtlesXD/Byte-Stealer/archive/refs/heads/main.zip) and extract the data.Extract the data into a proper directory(like c://users//Yourusername//)and not Downloads or any other prebuilt windows directory or else the script wont work!\
+Download the .zip file from [main.zip](https://github.com/TurtlesXD/Byte-Stealer/archive/refs/heads/main.zip)(experimental) or from the latest release(more stable) and extract the data.Extract the data into a proper directory(like c://users//Yourusername//)and not Downloads or any other prebuilt windows directory or else the script wont work!\
 Now if you dont have python run **Download-Python3.9.12.bat**. This will install python 3.9.12.\
 If you already have python (3.9 or above) or have finished running **Download-Python3.9.12.bat**,\
 Run **Install-Packages.bat**. This will download all the 3rd party packages used as well as pyinstaller for exe creation.\
