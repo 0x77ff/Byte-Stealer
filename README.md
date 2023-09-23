@@ -20,6 +20,8 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 [![Issues on GitHub](https://img.shields.io/github/issues/TurtlesXD/Byte-Stealer.svg?style=social)](https://github.com/TurtlesXD/Byte-Stealer/issues)
 # 
 
+
+
 Current New Update(s) Log:
 ```
 Redone system info embed
@@ -86,6 +88,15 @@ VirusTotal :\
 ![Alt text](img/VirusTotal.png?raw=true)
 ## How to Run:
 click [Here](https://github.com/TurtlesXD/Discord-Logger/blob/main/discord-logger-help/Help.md) for the guide
+# 
+
+<a href="https://star-history.com/#0x77ff/Byte-Stealer&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=0x77ff/Byte-Stealer&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=0x77ff/Byte-Stealer&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=0x77ff/Byte-Stealer&type=Date" />
+  </picture>
+</a>
 
 Thanks for checking out my repository!\
 msg me at 0x77ff on discord
