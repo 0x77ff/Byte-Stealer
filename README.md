@@ -21,7 +21,7 @@ Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/re
 # 
 
 
-
+If you use my code, give credit.
 Current New Update(s) Log:
 ```
 Redone system info embed
