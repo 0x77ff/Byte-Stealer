@@ -35,11 +35,6 @@ added roblox cookie grabbing to operagx and chromium browsers
 Wigle Geolocation using closest SSID and ip Latitude and longitude
 
 ```
-Working on:
-```
-update Config for wigle api encoded header (api key)
-exe bugfixes
-```
 
 
 A piece of malware/spyware written in python 3 with a ton of features and functionality\
