@@ -1,16 +1,16 @@
-# 
+# Please note that im not working on this anymore as i am moving onto other projects, and it probably wont work.
 <p align="center">
  <img src="https://github.com/TurtlesXD/Byte-Stealer/blob/main/img/BYTESTEAELRDSICORDPFP.png" />
 
 <div align="center">
-  <h1>Byte-Stealer 1.3.1</h1>
+  <h1>Byte-Stealer 1.3.1 </h1>
 </div>
 
 Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
 
 
 
-Please note that im not working on this anymore as i am moving onto other projects, and it probably wont work.
+
 
 Check out the latest release [Here](https://github.com/TurtlesXD/Byte-Stealer/releases/tag/v1.3.1)
 \
