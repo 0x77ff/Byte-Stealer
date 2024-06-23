@@ -5,7 +5,16 @@
 <div align="center">
   <h1>Byte-Stealer 1.3.1 </h1>
 </div>
+<div align="center">
+  <h3>check out my new project</h3>
+</div>
+<div align="center">
+  <h3>https://github.com/0x77ff/WebLocato</h3>
+</div>
 
+\
+\
+\
 Made by me with help from [201580ag](https://github.com/201580ag) and [TheCuteOwl](https://github.com/TheCuteOwl)
 
 
